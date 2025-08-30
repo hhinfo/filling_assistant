@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "files_tested": 4,
+    "total_files": 4,
+    "total_columns": 440,
+    "fillable_columns": 0,
+    "unknown_columns": 440,
+    "fillable_rate": 0.0
+  },
+  "detailed_results": [
+    {
+      "file": "(ACCO) External CPT Empty_structured.json",
+      "sheets": {
+        "Sheet1": {
+          "fillable_columns": 0,
+          "unknown_columns": 12,
+          "sheets_processed": 1,
+          "enhanced_enabled": true,
+          "total_columns": 12
+        }
+      },
+      "total_fillable": 0,
+      "total_unknown": 12,
+      "total_columns": 12
+    },
+    {
+      "file": "1. (Google Cloud) External CPT Empty_structured.json",
+      "sheets": {
+        "Instructions": {
+          "fillable_columns": 0,
+          "unknown_columns": 5,
+          "sheets_processed": 1,
+          "enhanced_enabled": true,
+          "total_columns": 5
+        },
+        "Conditional Bid Fields": {
+          "fillable_columns": 0,
+          "unknown_columns": 0,
+          "sheets_processed": 1,
+          "enhanced_enabled": true,
+          "total_columns": 0
+        },
+        "Airfreight": {
+          "fillable_columns": 0,
+          "unknown_columns": 73,
+          "sheets_processed": 1,
+          "enhanced_enabled": true,
+          "total_columns": 73
+        },
+        "DV_NAMED_LIST_RANGES": {
+          "fillable_columns": 0,
+          "unknown_columns": 83,
+          "sheets_processed": 1,
+          "enhanced_enabled": true,
+          "total_columns": 83
+        },
+        "Ocean-FCL": {
+          "fillable_columns": 0,
+          "unknown_columns": 67,
+          "sheets_processed": 1,
+          "enhanced_enabled": true,
+          "total_columns": 67
+        }
+      },
+      "total_fillable": 0,
+      "total_unknown": 228,
+      "total_columns": 228
+    },
+    {
+      "file": "(AppliedMat) External CPT Empty_structured.json",
+      "sheets": {
+        "Bid Template (1 year proposal)": {
+          "fillable_columns": 0,
+          "unknown_columns": 86,
+          "sheets_processed": 1,
+          "enhanced_enabled": true,
+          "total_columns": 86
+        },
+        "Bid Template (2 year proposal)": {
+          "fillable_columns": 0,
+          "unknown_columns": 86,
+          "sheets_processed": 1,
+          "enhanced_enabled": true,
+          "total_columns": 86
+        },
+        "TOC": {
+          "fillable_columns": 0,
+          "unknown_columns": 16,
+          "sheets_processed": 1,
+          "enhanced_enabled": true,
+          "total_columns": 16
+        },
+        "validationInfo": {
+          "fillable_columns": 0,
+          "unknown_columns": 0,
+          "sheets_processed": 1,
+          "enhanced_enabled": true,
+          "total_columns": 0
+        }
+      },
+      "total_fillable": 0,
+      "total_unknown": 188,
+      "total_columns": 188
+    },
+    {
+      "file": "1. External CPT Empty - Bitmain Intra Asia CHIP lanes 2025 Q3_structured.json",
+      "sheets": {
+        "\u82af\u7247\u7269\u6d41": {
+          "fillable_columns": 0,
+          "unknown_columns": 12,
+          "sheets_processed": 1,
+          "enhanced_enabled": true,
+          "total_columns": 12
+        }
+      },
+      "total_fillable": 0,
+      "total_unknown": 12,
+      "total_columns": 12
+    }
+  ]
+}

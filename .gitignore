@@ -11,20 +11,36 @@ Archived/
 copilot_folder/
 archived_files/
 
-# Training files (sensitive)
+# Training files (sensitive data)
 training_files/*.xlsx
 training_files/*.json
 !training_files/.gitkeep
-
 training_files2/
+
+# Pattern stores (potentially sensitive)
+patterns_stores/*.json
+!patterns_stores/.gitkeep
 
 # Output files (temporary)
 output/*.json
 output/*.txt
 !output/.gitkeep
+results/
+*.log
 
 # Environment Variables
 .env
+
+# Temporary files
+*.tmp
+temp_*
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
 # C extensions
 *.so

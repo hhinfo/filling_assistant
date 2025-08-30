@@ -1,0 +1,24 @@
+{
+  "Bid Sheet": {
+    "column_labels": {
+      "All In Charge (USD)*": "all_in_charge_usd",
+      "Routing*": "routing",
+      "Special Handling Fee": "special_handling_fee_usd",
+      "Custom Transit Time": "custom_transit_time_days"
+    }
+  },
+  "Rate Card": {
+    "column_labels": {
+      "Base Rate (USD/KG)": "base_rate_usd_per_kg", 
+      "Fuel Surcharge (%)": "fuel_surcharge_percent",
+      "Minimum Charge": "min_charge_usd"
+    }
+  },
+  "Major Lanes Only": {
+    "column_labels": {
+      "Carrier SCAC": "carrier_scac_code",
+      "Rate Structure": "rate_structure_type",
+      "Volume Discount": "volume_discount_percent"
+    }
+  }
+}

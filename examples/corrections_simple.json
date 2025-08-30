@@ -1,0 +1,8 @@
+{
+  "Bid Sheet": {
+    "column_labels": {
+      "All In Charge (USD)*": "all_in_charge_usd",
+      "Routing*": "routing"
+    }
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "summary": {
+    "total_files": 25,
+    "in_domain": {
+      "category": "IN-DOMAIN",
+      "files_tested": 8,
+      "total_files": 10,
+      "total_columns": 150,
+      "fillable_columns": 62,
+      "unknown_columns": 88,
+      "fillable_rate": 41.333333333333336,
+      "file_results": [
+        {
+          "file": "1. Blank CPT_APEX-ECA+Region-DG(PI965+IAIB)+Quotation_structured.json",
+          "fillable": 8,
+          "total": 19,
+          "rate": 42.10526315789473
+        },
+        {
+          "file": "4. Filled CPT_APEX-LA+Region-DG(PI967+SEC+I)+Quotation - PKG10_structured.json",
+          "fillable": 8,
+          "total": 19,
+          "rate": 42.10526315789473
+        },
+        {
+          "file": "1. Blank CPT_APEX-ECA+Region-GC(PI966967+SEC+II)+Quotation_structured.json",
+          "fillable": 7,
+          "total": 18,
+          "rate": 38.88888888888889
+        },
+        {
+          "file": "4. Filled CPT_APEX-MENA+Region-DG(PI965+IAIB)+Quotation - PKG12_structured.json",
+          "fillable": 8,
+          "total": 19,
+          "rate": 42.10526315789473
+        },
+        {
+          "file": "4. Filled CPT_APEX-MENA+Region-DG(PI967+SEC+I)+Quotation - PKG13_structured.json",
+          "fillable": 8,
+          "total": 19,
+          "rate": 42.10526315789473
+        },
+        {
+          "file": "4. Filled CPT_APEX-MENA+Region-GC(PI966967+SEC+II)+Quotation - PKG14_structured.json",
+          "fillable": 7,
+          "total": 18,
+          "rate": 38.88888888888889
+        },
+        {
+          "file": "4. Filled CPT_APEX-ECA+Region-DG(PI965+IAIB)+Quotation - PKG6_structured.json",
+          "fillable": 8,
+          "total": 19,
+          "rate": 42.10526315789473
+        },
+        {
+          "file": "1. Blank CPT_APEX-ASIA+Region-DG(PI965+IAIB)+Quotation_structured.json",
+          "fillable": 8,
+          "total": 19,
+          "rate": 42.10526315789473
+        }
+      ]
+    },
+    "out_of_domain": {
+      "category": "OUT-OF-DOMAIN",
+      "files_tested": 1,
+      "total_files": 15,
+      "total_columns": 39,
+      "fillable_columns": 20,
+      "unknown_columns": 19,
+      "fillable_rate": 51.28205128205128,
+      "file_results": [
+        {
+          "file": "(Logitech 2025) External CPT Filled_structured.json",
+          "fillable": 20,
+          "total": 39,
+          "rate": 51.28205128205128
+        }
+      ]
+    },
+    "overall": {
+      "fillable_columns": 82,
+      "total_columns": 189,
+      "success_rate": 43.386243386243386
+    }
+  },
+  "detailed_results": {
+    "in_domain_files": [
+      "1. Blank CPT_APEX-ECA+Region-DG(PI965+IAIB)+Quotation_structured.json",
+      "4. Filled CPT_APEX-LA+Region-DG(PI967+SEC+I)+Quotation - PKG10_structured.json",
+      "1. Blank CPT_APEX-ECA+Region-GC(PI966967+SEC+II)+Quotation_structured.json",
+      "4. Filled CPT_APEX-MENA+Region-DG(PI965+IAIB)+Quotation - PKG12_structured.json",
+      "4. Filled CPT_APEX-MENA+Region-DG(PI967+SEC+I)+Quotation - PKG13_structured.json",
+      "4. Filled CPT_APEX-MENA+Region-GC(PI966967+SEC+II)+Quotation - PKG14_structured.json",
+      "4. External CPT Filled- Bid+Form-2025AirRFQ-RFQRound1-APEX-0214250302_structured.json",
+      "4. Filled CPT_APEX-ECA+Region-DG(PI965+IAIB)+Quotation - PKG6_structured.json",
+      "1. Blank CPT_APEX-ASIA+Region-DG(PI965+IAIB)+Quotation_structured.json",
+      "1. Blank Customer CPT_APEX Air Key lanes_20250707 APEX 26Q update_structured.json"
+    ],
+    "out_of_domain_files": [
+      "(ACCO) External CPT Empty_structured.json",
+      "1. Blank_CPT_MGI Aug RFQ_CN+WHS Quotation template \u4f9b\u5e94\u5546\u62a5\u4ef7\u6a21\u677f-202508_structured.json",
+      "1. Blank CPT_MEA_ASUS 2025 2H RFQ_structured.json",
+      "4. Filled CPT_rate_card_template_T202501160008 v2_structured.json",
+      "4.Filled_CPT_MGI Aug RFQ_CN+WHS Quotation template \u4f9b\u5e94\u5546\u62a5\u4ef7\u6a21\u677f-202508_structured.json",
+      "4. Filled CPT_EUROPE_ASUS RFQ_2025 2H_structured.json",
+      "1. Blank CPT_rate_card_template_T202501160008_structured.json",
+      "(Logitech 2025) External CPT Filled_structured.json",
+      "1. (Google Cloud) External CPT Empty_structured.json",
+      "Google DSPA 2025 CPT EMPTY_structured.json",
+      "(Illumina) External CPT Filled_structured.json",
+      "(AppliedMat) External CPT Empty_structured.json",
+      "1. External CPT Empty - Bitmain Intra Asia CHIP lanes 2025 Q3_structured.json",
+      "1. Blank CPT_RFQ-Flight-June_structured.json",
+      "1. Blank CPT_MasterFile Proposal Mini Round - RFQ H1 2025 rev2_structured.json"
+    ],
+    "all_results": [
+      {
+        "file": "(Logitech 2025) External CPT Filled_structured.json",
+        "fillable": 20,
+        "total": 39,
+        "rate": 51.28205128205128
+      },
+      {
+        "file": "1. Blank CPT_APEX-ECA+Region-DG(PI965+IAIB)+Quotation_structured.json",
+        "fillable": 8,
+        "total": 19,
+        "rate": 42.10526315789473
+      },
+      {
+        "file": "4. Filled CPT_APEX-LA+Region-DG(PI967+SEC+I)+Quotation - PKG10_structured.json",
+        "fillable": 8,
+        "total": 19,
+        "rate": 42.10526315789473
+      },
+      {
+        "file": "4. Filled CPT_APEX-MENA+Region-DG(PI965+IAIB)+Quotation - PKG12_structured.json",
+        "fillable": 8,
+        "total": 19,
+        "rate": 42.10526315789473
+      },
+      {
+        "file": "4. Filled CPT_APEX-MENA+Region-DG(PI967+SEC+I)+Quotation - PKG13_structured.json",
+        "fillable": 8,
+        "total": 19,
+        "rate": 42.10526315789473
+      },
+      {
+        "file": "4. Filled CPT_APEX-ECA+Region-DG(PI965+IAIB)+Quotation - PKG6_structured.json",
+        "fillable": 8,
+        "total": 19,
+        "rate": 42.10526315789473
+      },
+      {
+        "file": "1. Blank CPT_APEX-ASIA+Region-DG(PI965+IAIB)+Quotation_structured.json",
+        "fillable": 8,
+        "total": 19,
+        "rate": 42.10526315789473
+      },
+      {
+        "file": "1. Blank CPT_APEX-ECA+Region-GC(PI966967+SEC+II)+Quotation_structured.json",
+        "fillable": 7,
+        "total": 18,
+        "rate": 38.88888888888889
+      },
+      {
+        "file": "4. Filled CPT_APEX-MENA+Region-GC(PI966967+SEC+II)+Quotation - PKG14_structured.json",
+        "fillable": 7,
+        "total": 18,
+        "rate": 38.88888888888889
+      }
+    ]
+  }
+}

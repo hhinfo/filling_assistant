@@ -1,0 +1,488 @@
+{
+  "metadata": {
+    "created": "2025-08-28T12:00:13.724528",
+    "total_decisions": 20,
+    "accuracy_feedback": {}
+  },
+  "decisions": {
+    "(ACCO) External CPT Empty_structured.json_20250828_120101": {
+      "timestamp": "2025-08-28T12:01:01.692738",
+      "file_name": "(ACCO) External CPT Empty_structured.json",
+      "context": "\nFile: (ACCO) External CPT Empty_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\n\nSAMPLE DATA (first 3 rows):\n\nRow 0:\n\nRow 1:\n\nRow 2:\n\n\nTASK: Evaluate the candidates and provide the BEST header mapping. Consider:\n1. Business domain appropriateness (logistics, shipping, finance)\n2. Header naming consistency and clarity\n3. Semantic meaning alignment with data\n4. Standard industry terminology\n\nPlease provide your analysis in JSON format.\n",
+      "ai_result": {
+        "validated_mapping": {},
+        "confidence": 0.0,
+        "reasoning": "There is no data provided to evaluate the header mapping. Without data or detection candidates, it's impossible to provide a meaningful analysis or suggestions for improvements.",
+        "improvements": [
+          "Provide data and detection candidates for evaluation"
+        ]
+      },
+      "confidence": 0.0
+    },
+    "(AppliedMat) External CPT Filled_structured.json_20250828_120105": {
+      "timestamp": "2025-08-28T12:01:05.303958",
+      "file_name": "(AppliedMat) External CPT Filled_structured.json",
+      "context": "\nFile: (AppliedMat) External CPT Filled_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 31):\n  col_1 -> '14'\n  col_2 -> 'alb'\n  col_3 -> 'us'\n  col_4 -> 'amr'\n  col_5 -> 'icn'\n  col_6 -> 'kr'\n  col_7 -> 'apac'\n  col_8 -> 'alb-icn'\n  col_9 -> 'us-kr'\n  col_10 -> 'amr-apac'\n  ... and 74 more headers\n\nCandidate 2 (Row 35):\n  col_1 -> '18'\n  col_2 -> 'alb'\n  col_3 -> 'us'\n  col_4 -> 'amr'\n  col_5 -> 'szx'\n  col_6 -> 'cn'\n  col_7 -> 'apac'\n  col_8 -> 'alb-szx'\n  col_9 -> 'us-cn'\n  col_10 -> 'amr-apac'\n  ... and 74 more headers\n\nCandidate 3 (Row 0):\n  col_15 -> 'pickup_cost_from_origin'\n  col_19 -> 'pickup_cost_from_origin'\n  col_23 -> 'export_declaration_fee'\n  col_24 -> 'ata_rate_airport_to_airport_-_sl1'\n  col_30 -> 'ata_rate_airport_to_airport_-_sl2'\n  col_36 -> 'ata_rate_airport_to_airport_-_sl3'\n  col_43 -> 'destination_terminal'\n  col_44 -> 'delivery_cost_to_destination'\n  col_48 -> 'delivery_cost_to_destination'\n  col_52 -> 'brokerage_fee'\n\n\nSAMPLE DATA (first",
+      "ai_result": {
+        "validated_mapping": {},
+        "confidence": 0.0,
+        "reasoning": "The provided data is insufficient to make a confident mapping. The first two candidates seem to be data rather than headers, and the third candidate only provides a subset of the headers. Additionally, no sample data is provided to validate the semantic meaning of the headers.",
+        "improvements": [
+          "Provide more context or sample data for the headers",
+          "Ensure that the header candidates are actual headers and not data",
+          "Provide a complete set of headers for evaluation"
+        ]
+      },
+      "confidence": 0.0
+    },
+    "(AppliedMat) External CPT Filled_structured.json_20250828_120117": {
+      "timestamp": "2025-08-28T12:01:17.537150",
+      "file_name": "(AppliedMat) External CPT Filled_structured.json",
+      "context": "\nFile: (AppliedMat) External CPT Filled_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 13):\n  col_15 -> 'pickup_air_ride_per_kg'\n  col_16 -> 'pickup_air_ride_min'\n  col_17 -> 'pickup_air_ride_max'\n  col_19 -> 'pickup_non_air_ride_per_kg'\n  col_20 -> 'pickup_non_air_ride_min'\n  col_21 -> 'pickup_non_air_ride_max'\n  col_23 -> 'export_declaration_fee_per_declaration'\n  col_24 -> 'ata_70kgs'\n  col_25 -> 'ata_71_300_kgs'\n  col_26 -> 'ata_301_1000_kgs'\n  ... and 33 more headers\n\nCandidate 2 (Row 16):\n  col_14 -> 'bid_status'\n  col_15 -> 'pickup_air-ride'\n  col_18 -> 'pickup_air-ride_min/max_error_flag'\n  col_19 -> 'pickup_non-air-ride'\n  col_22 -> 'pickup_non-air-ride_min/max_error_flag'\n  col_23 -> 'export_declaration_fee'\n  col_24 -> 'sl1_<=70_kgs'\n  col_25 -> 'sl1_>70-300_kgs'\n  col_26 -> 'sl1_>300-1000_kgs'\n  col_27 -> 'sl1_>1000-5000_kgs'\n  ... and 52 more headers\n\nCandidate 3 (Row 0):\n  col_0 -> 'hide_sheet'\n  col_15 -> 'pickup_cost_from_origin'\n  col_19 -> 'pi",
+      "ai_result": {
+        "validated_mapping": {
+          "col_15": "pickup_air_ride_per_kg",
+          "col_16": "pickup_air_ride_min",
+          "col_17": "pickup_air_ride_max",
+          "col_19": "pickup_non_air_ride_per_kg",
+          "col_20": "pickup_non_air_ride_min",
+          "col_21": "pickup_non_air_ride_max",
+          "col_23": "export_declaration_fee_per_declaration",
+          "col_24": "ata_70kgs",
+          "col_25": "ata_71_300_kgs",
+          "col_26": "ata_301_1000_kgs"
+        },
+        "confidence": 0.9,
+        "reasoning": "Candidate 1 seems to be the most appropriate as it aligns well with the logistics and shipping domain. The headers are clear, consistent, and seem to match the expected data types. The headers in Candidate 2 are less clear due to the use of special characters and ranges in the header names. Candidate 3 seems to be less relevant as it includes headers like 'hide_sheet' which do not align with the business domain.",
+        "improvements": [
+          "Remove special characters from header names to improve clarity and consistency.",
+          "Use full words instead of abbreviations where possible to improve understanding.",
+          "Ensure all headers are relevant to the business domain and remove any that are not."
+        ]
+      },
+      "confidence": 0.9
+    },
+    "(AppliedMat) External CPT Filled_structured.json_20250828_120129": {
+      "timestamp": "2025-08-28T12:01:29.082884",
+      "file_name": "(AppliedMat) External CPT Filled_structured.json",
+      "context": "\nFile: (AppliedMat) External CPT Filled_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 2):\n  col_0 -> 'allowable_accessorials'\n  col_1 -> 'h11'\n  col_2 -> 'hazmat_dangerous_good_rate_surcharge_rate'\n  col_10 -> 'phase:'\n  col_11 -> 'rfq_round_1'\n  col_14 -> 'windows_32-bit_nt_:.00'\n\nCandidate 2 (Row 1):\n  col_0 -> 'allowable_accessorials'\n  col_1 -> 'g11'\n  col_2 -> 'hazmat_dangerous_good_rate_surcharge_min'\n  col_10 -> 'eventnumber:'\n  col_11 -> '300'\n  col_14 -> '16.0'\n\nCandidate 3 (Row 0):\n  col_10 -> 'event:'\n  col_11 -> 'applied_materials_2025_global_bulk_air_rfp_to-be_network'\n  col_14 -> 'pcdos'\n  col_16 -> '-14277082,-16777216,-6437914,-13609577,-5391926,-1213135,-2432013,-6697984,-13732426,-16748352,-9882,-3809100,-16731920,-1,-16768928,-14725511,-7155632,-4335634,-13312,-16776961,-2500135,-1904423,-256,-65536,-3380'\n\n\nSAMPLE DATA (first 3 rows):\n\nRow 0:\n  col_0: '<<toc|gmtOffset:Asia/Singapore>>'\n\nRow 1:\n  col_0: 'Allowable Accessorials'\n  col_1: 'G11",
+      "ai_result": {
+        "validated_mapping": {
+          "col_0": "allowable_accessorials",
+          "col_1": "g11",
+          "col_2": "hazmat_dangerous_good_rate_surcharge_min"
+        },
+        "confidence": 0.7,
+        "reasoning": "The headers from Candidate 2 (Row 1) seem to be the most appropriate for a business context, specifically in the logistics and shipping domain. 'allowable_accessorials', 'g11', and 'hazmat_dangerous_good_rate_surcharge_min' are all terms that could be relevant in this context. However, the headers 'g11' and 'hazmat_dangerous_good_rate_surcharge_min' are not very clear and might not be standard industry terminology. The headers from Candidate 1 and 3 contain irrelevant or unclear terms, such as 'phase:', 'eventnumber:', 'rfq_round_1', 'windows_32-bit_nt_:.00', 'pcdos', and a long list of negative numbers.",
+        "improvements": [
+          "Rename 'g11' to a more descriptive and meaningful header.",
+          "Rename 'hazmat_dangerous_good_rate_surcharge_min' to a shorter and more understandable header.",
+          "Ensure that all headers are relevant to the business context and are standard industry terminology."
+        ]
+      },
+      "confidence": 0.7
+    },
+    "(ACCO) External CPT Empty_structured.json_20250828_120225": {
+      "timestamp": "2025-08-28T12:02:25.014625",
+      "file_name": "(ACCO) External CPT Empty_structured.json",
+      "context": "\nFile: (ACCO) External CPT Empty_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\n\nSAMPLE DATA (first 3 rows):\n\nRow 0:\n\nRow 1:\n\nRow 2:\n\n\nTASK: Evaluate the candidates and provide the BEST header mapping. Consider:\n1. Business domain appropriateness (logistics, shipping, finance)\n2. Header naming consistency and clarity\n3. Semantic meaning alignment with data\n4. Standard industry terminology\n\nPlease provide your analysis in JSON format.\n",
+      "ai_result": {
+        "validated_mapping": {},
+        "confidence": 0.0,
+        "reasoning": "There is no data provided in the detection candidates or the sample data. Therefore, it's impossible to evaluate or propose any header mapping.",
+        "improvements": [
+          "Provide detection candidates and sample data for evaluation"
+        ]
+      },
+      "confidence": 0.0
+    },
+    "(AppliedMat) External CPT Filled_structured.json_20250828_120234": {
+      "timestamp": "2025-08-28T12:02:34.004697",
+      "file_name": "(AppliedMat) External CPT Filled_structured.json",
+      "context": "\nFile: (AppliedMat) External CPT Filled_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 31):\n  col_1 -> '14'\n  col_2 -> 'alb'\n  col_3 -> 'us'\n  col_4 -> 'amr'\n  col_5 -> 'icn'\n  col_6 -> 'kr'\n  col_7 -> 'apac'\n  col_8 -> 'alb-icn'\n  col_9 -> 'us-kr'\n  col_10 -> 'amr-apac'\n  ... and 74 more headers\n\nCandidate 2 (Row 35):\n  col_1 -> '18'\n  col_2 -> 'alb'\n  col_3 -> 'us'\n  col_4 -> 'amr'\n  col_5 -> 'szx'\n  col_6 -> 'cn'\n  col_7 -> 'apac'\n  col_8 -> 'alb-szx'\n  col_9 -> 'us-cn'\n  col_10 -> 'amr-apac'\n  ... and 74 more headers\n\nCandidate 3 (Row 0):\n  col_15 -> 'pickup_cost_from_origin'\n  col_19 -> 'pickup_cost_from_origin'\n  col_23 -> 'export_declaration_fee'\n  col_24 -> 'ata_rate_airport_to_airport_-_sl1'\n  col_30 -> 'ata_rate_airport_to_airport_-_sl2'\n  col_36 -> 'ata_rate_airport_to_airport_-_sl3'\n  col_43 -> 'destination_terminal'\n  col_44 -> 'delivery_cost_to_destination'\n  col_48 -> 'delivery_cost_to_destination'\n  col_52 -> 'brokerage_fee'\n\n\nSAMPLE DATA (first",
+      "ai_result": {
+        "validated_mapping": {
+          "col_15": "pickup_cost_from_origin",
+          "col_19": "pickup_cost_from_origin",
+          "col_23": "export_declaration_fee",
+          "col_24": "ata_rate_airport_to_airport_-_sl1",
+          "col_30": "ata_rate_airport_to_airport_-_sl2",
+          "col_36": "ata_rate_airport_to_airport_-_sl3",
+          "col_43": "destination_terminal",
+          "col_44": "delivery_cost_to_destination",
+          "col_48": "delivery_cost_to_destination",
+          "col_52": "brokerage_fee"
+        },
+        "confidence": 0.8,
+        "reasoning": "The third candidate seems to be the most appropriate for the business domain. It includes headers that are related to logistics and shipping, such as pickup cost, export declaration fee, airport to airport rate, destination terminal, delivery cost, and brokerage fee. These headers are clear, consistent, and align with the semantic meaning of the data. However, there are duplicate headers (pickup_cost_from_origin and delivery_cost_to_destination), which reduces the confidence level.",
+        "improvements": [
+          "Remove duplicate headers",
+          "Provide more context in the header names, for example, specify the unit of cost in the cost-related headers",
+          "Use more standard industry terminology, for example, replace 'ata_rate_airport_to_airport_-_sl1' with 'standard_logistics_rate_1'"
+        ]
+      },
+      "confidence": 0.8
+    },
+    "(AppliedMat) External CPT Filled_structured.json_20250828_120247": {
+      "timestamp": "2025-08-28T12:02:47.104396",
+      "file_name": "(AppliedMat) External CPT Filled_structured.json",
+      "context": "\nFile: (AppliedMat) External CPT Filled_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 13):\n  col_15 -> 'pickup_air_ride_per_kg'\n  col_16 -> 'pickup_air_ride_min'\n  col_17 -> 'pickup_air_ride_max'\n  col_19 -> 'pickup_non_air_ride_per_kg'\n  col_20 -> 'pickup_non_air_ride_min'\n  col_21 -> 'pickup_non_air_ride_max'\n  col_23 -> 'export_declaration_fee_per_declaration'\n  col_24 -> 'ata_70kgs'\n  col_25 -> 'ata_71_300_kgs'\n  col_26 -> 'ata_301_1000_kgs'\n  ... and 33 more headers\n\nCandidate 2 (Row 16):\n  col_14 -> 'bid_status'\n  col_15 -> 'pickup_air-ride'\n  col_18 -> 'pickup_air-ride_min/max_error_flag'\n  col_19 -> 'pickup_non-air-ride'\n  col_22 -> 'pickup_non-air-ride_min/max_error_flag'\n  col_23 -> 'export_declaration_fee'\n  col_24 -> 'sl1_<=70_kgs'\n  col_25 -> 'sl1_>70-300_kgs'\n  col_26 -> 'sl1_>300-1000_kgs'\n  col_27 -> 'sl1_>1000-5000_kgs'\n  ... and 52 more headers\n\nCandidate 3 (Row 0):\n  col_0 -> 'hide_sheet'\n  col_15 -> 'pickup_cost_from_origin'\n  col_19 -> 'pi",
+      "ai_result": {
+        "validated_mapping": {
+          "col_15": "pickup_air_ride_per_kg",
+          "col_16": "pickup_air_ride_min",
+          "col_17": "pickup_air_ride_max",
+          "col_19": "pickup_non_air_ride_per_kg",
+          "col_20": "pickup_non_air_ride_min",
+          "col_21": "pickup_non_air_ride_max",
+          "col_23": "export_declaration_fee_per_declaration",
+          "col_24": "ata_70kgs",
+          "col_25": "ata_71_300_kgs",
+          "col_26": "ata_301_1000_kgs"
+        },
+        "confidence": 0.85,
+        "reasoning": "Candidate 1 seems to be the most appropriate choice for header mapping. The headers are clear, concise, and they align well with the logistics and shipping domain. They also seem to follow a consistent naming convention. However, without more context or sample data, it's hard to be 100% confident in this choice.",
+        "improvements": [
+          "Provide more context or sample data for better accuracy in header mapping.",
+          "Consider using more descriptive header names for columns like 'ata_70kgs', 'ata_71_300_kgs', and 'ata_301_1000_kgs'. It's not immediately clear what 'ata' stands for.",
+          "Ensure consistency in naming convention. For example, if you're using underscores to separate words in one header, use them in all headers."
+        ]
+      },
+      "confidence": 0.85
+    },
+    "(AppliedMat) External CPT Filled_structured.json_20250828_120257": {
+      "timestamp": "2025-08-28T12:02:57.056112",
+      "file_name": "(AppliedMat) External CPT Filled_structured.json",
+      "context": "\nFile: (AppliedMat) External CPT Filled_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 2):\n  col_0 -> 'allowable_accessorials'\n  col_1 -> 'h11'\n  col_2 -> 'hazmat_dangerous_good_rate_surcharge_rate'\n  col_10 -> 'phase:'\n  col_11 -> 'rfq_round_1'\n  col_14 -> 'windows_32-bit_nt_:.00'\n\nCandidate 2 (Row 1):\n  col_0 -> 'allowable_accessorials'\n  col_1 -> 'g11'\n  col_2 -> 'hazmat_dangerous_good_rate_surcharge_min'\n  col_10 -> 'eventnumber:'\n  col_11 -> '300'\n  col_14 -> '16.0'\n\nCandidate 3 (Row 0):\n  col_10 -> 'event:'\n  col_11 -> 'applied_materials_2025_global_bulk_air_rfp_to-be_network'\n  col_14 -> 'pcdos'\n  col_16 -> '-14277082,-16777216,-6437914,-13609577,-5391926,-1213135,-2432013,-6697984,-13732426,-16748352,-9882,-3809100,-16731920,-1,-16768928,-14725511,-7155632,-4335634,-13312,-16776961,-2500135,-1904423,-256,-65536,-3380'\n\n\nSAMPLE DATA (first 3 rows):\n\nRow 0:\n  col_0: '<<toc|gmtOffset:Asia/Singapore>>'\n\nRow 1:\n  col_0: 'Allowable Accessorials'\n  col_1: 'G11",
+      "ai_result": {
+        "validated_mapping": {
+          "col_0": "allowable_accessorials",
+          "col_1": "g11",
+          "col_2": "hazmat_dangerous_good_rate_surcharge_min"
+        },
+        "confidence": 0.7,
+        "reasoning": "The selected mapping from Candidate 2 (Row 1) seems to be the most appropriate as it aligns with the logistics and shipping domain. The headers 'allowable_accessorials', 'g11', and 'hazmat_dangerous_good_rate_surcharge_min' are relevant to the business domain. However, the headers 'g11' and 'hazmat_dangerous_good_rate_surcharge_min' could be more descriptive and clear. The other columns (col_10, col_11, col_14, col_16) from the candidates do not seem to contain valid header information and are therefore excluded.",
+        "improvements": [
+          "The header 'g11' could be more descriptive. It's unclear what 'g11' refers to in the context of logistics and shipping.",
+          "The header 'hazmat_dangerous_good_rate_surcharge_min' could be simplified for clarity. It could be renamed to 'hazmat_surcharge_min_rate' or similar.",
+          "Additional data samples would be helpful to validate the headers and improve the confidence level."
+        ]
+      },
+      "confidence": 0.7
+    },
+    "(ACCO) External CPT Empty_structured.json_20250828_120349": {
+      "timestamp": "2025-08-28T12:03:49.078694",
+      "file_name": "(ACCO) External CPT Empty_structured.json",
+      "context": "\nFile: (ACCO) External CPT Empty_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\n\nSAMPLE DATA (first 3 rows):\n\nRow 0:\n\nRow 1:\n\nRow 2:\n\n\nTASK: Evaluate the candidates and provide the BEST header mapping. Consider:\n1. Business domain appropriateness (logistics, shipping, finance)\n2. Header naming consistency and clarity\n3. Semantic meaning alignment with data\n4. Standard industry terminology\n\nPlease provide your analysis in JSON format.\n",
+      "ai_result": {
+        "validated_mapping": {},
+        "confidence": 0.0,
+        "reasoning": "There is no data provided to evaluate the header mapping. Without data or detection candidates, it's impossible to provide a meaningful analysis or suggestions for improvements.",
+        "improvements": []
+      },
+      "confidence": 0.0
+    },
+    "(AppliedMat) External CPT Filled_structured.json_20250828_120357": {
+      "timestamp": "2025-08-28T12:03:57.536975",
+      "file_name": "(AppliedMat) External CPT Filled_structured.json",
+      "context": "\nFile: (AppliedMat) External CPT Filled_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 31):\n  col_1 -> '14'\n  col_2 -> 'alb'\n  col_3 -> 'us'\n  col_4 -> 'amr'\n  col_5 -> 'icn'\n  col_6 -> 'kr'\n  col_7 -> 'apac'\n  col_8 -> 'alb-icn'\n  col_9 -> 'us-kr'\n  col_10 -> 'amr-apac'\n  ... and 74 more headers\n\nCandidate 2 (Row 35):\n  col_1 -> '18'\n  col_2 -> 'alb'\n  col_3 -> 'us'\n  col_4 -> 'amr'\n  col_5 -> 'szx'\n  col_6 -> 'cn'\n  col_7 -> 'apac'\n  col_8 -> 'alb-szx'\n  col_9 -> 'us-cn'\n  col_10 -> 'amr-apac'\n  ... and 74 more headers\n\nCandidate 3 (Row 0):\n  col_15 -> 'pickup_cost_from_origin'\n  col_19 -> 'pickup_cost_from_origin'\n  col_23 -> 'export_declaration_fee'\n  col_24 -> 'ata_rate_airport_to_airport_-_sl1'\n  col_30 -> 'ata_rate_airport_to_airport_-_sl2'\n  col_36 -> 'ata_rate_airport_to_airport_-_sl3'\n  col_43 -> 'destination_terminal'\n  col_44 -> 'delivery_cost_to_destination'\n  col_48 -> 'delivery_cost_to_destination'\n  col_52 -> 'brokerage_fee'\n\n\nSAMPLE DATA (first",
+      "ai_result": {
+        "validated_mapping": {
+          "col_15": "pickup_cost_from_origin",
+          "col_19": "pickup_cost_from_origin",
+          "col_23": "export_declaration_fee",
+          "col_24": "ata_rate_airport_to_airport_-_sl1",
+          "col_30": "ata_rate_airport_to_airport_-_sl2",
+          "col_36": "ata_rate_airport_to_airport_-_sl3",
+          "col_43": "destination_terminal",
+          "col_44": "delivery_cost_to_destination",
+          "col_48": "delivery_cost_to_destination",
+          "col_52": "brokerage_fee"
+        },
+        "confidence": 0.9,
+        "reasoning": "Candidate 3 is the most appropriate header mapping. It contains headers that are relevant to the logistics and shipping domain, such as 'pickup_cost_from_origin', 'export_declaration_fee', 'ata_rate_airport_to_airport_-_sl1', 'destination_terminal', 'delivery_cost_to_destination', and 'brokerage_fee'. These headers are clear, consistent, and align with the semantic meaning of the data. Candidate 1 and 2 seem to contain location codes and abbreviations, which are not as descriptive or meaningful as the headers in Candidate 3.",
+        "improvements": [
+          "Remove duplicate headers such as 'pickup_cost_from_origin' and 'delivery_cost_to_destination'.",
+          "Consider renaming headers like 'ata_rate_airport_to_airport_-_sl1' to something more concise and understandable.",
+          "Ensure that all columns have headers, not just a subset."
+        ]
+      },
+      "confidence": 0.9
+    },
+    "(AppliedMat) External CPT Filled_structured.json_20250828_120408": {
+      "timestamp": "2025-08-28T12:04:08.381678",
+      "file_name": "(AppliedMat) External CPT Filled_structured.json",
+      "context": "\nFile: (AppliedMat) External CPT Filled_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 13):\n  col_15 -> 'pickup_air_ride_per_kg'\n  col_16 -> 'pickup_air_ride_min'\n  col_17 -> 'pickup_air_ride_max'\n  col_19 -> 'pickup_non_air_ride_per_kg'\n  col_20 -> 'pickup_non_air_ride_min'\n  col_21 -> 'pickup_non_air_ride_max'\n  col_23 -> 'export_declaration_fee_per_declaration'\n  col_24 -> 'ata_70kgs'\n  col_25 -> 'ata_71_300_kgs'\n  col_26 -> 'ata_301_1000_kgs'\n  ... and 33 more headers\n\nCandidate 2 (Row 16):\n  col_14 -> 'bid_status'\n  col_15 -> 'pickup_air-ride'\n  col_18 -> 'pickup_air-ride_min/max_error_flag'\n  col_19 -> 'pickup_non-air-ride'\n  col_22 -> 'pickup_non-air-ride_min/max_error_flag'\n  col_23 -> 'export_declaration_fee'\n  col_24 -> 'sl1_<=70_kgs'\n  col_25 -> 'sl1_>70-300_kgs'\n  col_26 -> 'sl1_>300-1000_kgs'\n  col_27 -> 'sl1_>1000-5000_kgs'\n  ... and 52 more headers\n\nCandidate 3 (Row 0):\n  col_0 -> 'hide_sheet'\n  col_15 -> 'pickup_cost_from_origin'\n  col_19 -> 'pi",
+      "ai_result": {
+        "validated_mapping": {
+          "col_15": "pickup_air_ride_per_kg",
+          "col_16": "pickup_air_ride_min",
+          "col_17": "pickup_air_ride_max",
+          "col_19": "pickup_non_air_ride_per_kg",
+          "col_20": "pickup_non_air_ride_min",
+          "col_21": "pickup_non_air_ride_max",
+          "col_23": "export_declaration_fee_per_declaration",
+          "col_24": "ata_70kgs",
+          "col_25": "ata_71_300_kgs",
+          "col_26": "ata_301_1000_kgs"
+        },
+        "confidence": 0.85,
+        "reasoning": "Candidate 1 seems to be the most appropriate choice as it aligns well with the logistics and shipping domain. The headers are clear, consistent, and seem to align semantically with the data. However, without seeing the actual data in the columns, it's hard to be 100% confident.",
+        "improvements": [
+          "Ensure that the headers accurately reflect the data in the columns.",
+          "Consider using more standard industry terminology if applicable.",
+          "Avoid using abbreviations or acronyms without explanation (e.g., 'ata').",
+          "Consider adding units to the headers where applicable (e.g., 'export_declaration_fee_per_declaration' could be 'export_declaration_fee_per_declaration_in_usd')."
+        ]
+      },
+      "confidence": 0.85
+    },
+    "(AppliedMat) External CPT Filled_structured.json_20250828_120418": {
+      "timestamp": "2025-08-28T12:04:18.813610",
+      "file_name": "(AppliedMat) External CPT Filled_structured.json",
+      "context": "\nFile: (AppliedMat) External CPT Filled_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 2):\n  col_0 -> 'allowable_accessorials'\n  col_1 -> 'h11'\n  col_2 -> 'hazmat_dangerous_good_rate_surcharge_rate'\n  col_10 -> 'phase:'\n  col_11 -> 'rfq_round_1'\n  col_14 -> 'windows_32-bit_nt_:.00'\n\nCandidate 2 (Row 1):\n  col_0 -> 'allowable_accessorials'\n  col_1 -> 'g11'\n  col_2 -> 'hazmat_dangerous_good_rate_surcharge_min'\n  col_10 -> 'eventnumber:'\n  col_11 -> '300'\n  col_14 -> '16.0'\n\nCandidate 3 (Row 0):\n  col_10 -> 'event:'\n  col_11 -> 'applied_materials_2025_global_bulk_air_rfp_to-be_network'\n  col_14 -> 'pcdos'\n  col_16 -> '-14277082,-16777216,-6437914,-13609577,-5391926,-1213135,-2432013,-6697984,-13732426,-16748352,-9882,-3809100,-16731920,-1,-16768928,-14725511,-7155632,-4335634,-13312,-16776961,-2500135,-1904423,-256,-65536,-3380'\n\n\nSAMPLE DATA (first 3 rows):\n\nRow 0:\n  col_0: '<<toc|gmtOffset:Asia/Singapore>>'\n\nRow 1:\n  col_0: 'Allowable Accessorials'\n  col_1: 'G11",
+      "ai_result": {
+        "validated_mapping": {
+          "col_0": "allowable_accessorials",
+          "col_1": "g11",
+          "col_2": "hazmat_dangerous_good_rate_surcharge_min",
+          "col_10": "eventnumber",
+          "col_11": "300",
+          "col_14": "16.0"
+        },
+        "confidence": 0.7,
+        "reasoning": "The second candidate seems to be the most appropriate as it aligns with the business domain of logistics and shipping. The headers such as 'allowable_accessorials', 'hazmat_dangerous_good_rate_surcharge_min' are relevant to the logistics domain. However, the headers 'g11', 'eventnumber', '300', and '16.0' are not very clear in their semantic meaning and do not seem to follow standard industry terminology.",
+        "improvements": [
+          "The header 'g11' could be renamed to something more descriptive and relevant to the logistics domain.",
+          "The header 'eventnumber' could be renamed to 'event_number' to follow naming conventions.",
+          "The headers '300' and '16.0' do not seem to be appropriate header names. They could be replaced with more descriptive names relevant to the data they represent."
+        ]
+      },
+      "confidence": 0.7
+    },
+    "test_sample.json_20250828_120424": {
+      "timestamp": "2025-08-28T12:04:24.924244",
+      "file_name": "test_sample.json",
+      "context": "\nFile: test_sample.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 1):\n  col_0 -> 'asia_us_001'\n  col_1 -> 'shanghai'\n  col_2 -> 'los_angeles'\n\nCandidate 2 (Row 2):\n  col_0 -> 'asia_us_002'\n  col_1 -> 'ningbo'\n  col_2 -> 'long_beach'\n\nCandidate 3 (Row 0):\n  col_0 -> 'lane_id'\n  col_1 -> 'origin_port'\n  col_2 -> 'destination_port'\n\n\nSAMPLE DATA (first 3 rows):\n\nRow 0:\n  col_0: 'Lane ID'\n  col_1: 'Origin Port'\n  col_2: 'Destination Port'\n\nRow 1:\n  col_0: 'ASIA_US_001'\n  col_1: 'Shanghai'\n  col_2: 'Los Angeles'\n\nRow 2:\n  col_0: 'ASIA_US_002'\n  col_1: 'Ningbo'\n  col_2: 'Long Beach'\n\n\nTASK: Evaluate the candidates and provide the BEST header mapping. Consider:\n1. Business domain appropriateness (logistics, shipping, finance)\n2. Header naming consistency and clarity\n3. Semantic meaning alignment with data\n4. Standard industry terminology\n\nPlease provide your analysis in JSON format.\n",
+      "ai_result": {
+        "validated_mapping": {
+          "col_0": "lane_id",
+          "col_1": "origin_port",
+          "col_2": "destination_port"
+        },
+        "confidence": 1.0,
+        "reasoning": "Candidate 3 is the most appropriate header mapping. It aligns with the business domain of logistics and shipping, as 'lane_id' typically refers to a specific shipping route, and 'origin_port' and 'destination_port' are standard terms for the start and end points of a shipping route. The headers are clear, consistent, and semantically aligned with the data in the columns. The other candidates appear to be data entries rather than headers.",
+        "improvements": [
+          "No improvements needed as the selected mapping is already clear, consistent, and aligned with the business domain."
+        ]
+      },
+      "confidence": 1.0
+    },
+    "training_files2/(AppliedMat) External CPT Filled_structured.json_20250828_120611": {
+      "timestamp": "2025-08-28T12:06:11.816978",
+      "file_name": "training_files2/(AppliedMat) External CPT Filled_structured.json",
+      "context": "\nFile: training_files2/(AppliedMat) External CPT Filled_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 31):\n  col_1 -> '14'\n  col_2 -> 'alb'\n  col_3 -> 'us'\n  col_4 -> 'amr'\n  col_5 -> 'icn'\n  col_6 -> 'kr'\n  col_7 -> 'apac'\n  col_8 -> 'alb-icn'\n  col_9 -> 'us-kr'\n  col_10 -> 'amr-apac'\n  ... and 74 more headers\n\nCandidate 2 (Row 35):\n  col_1 -> '18'\n  col_2 -> 'alb'\n  col_3 -> 'us'\n  col_4 -> 'amr'\n  col_5 -> 'szx'\n  col_6 -> 'cn'\n  col_7 -> 'apac'\n  col_8 -> 'alb-szx'\n  col_9 -> 'us-cn'\n  col_10 -> 'amr-apac'\n  ... and 74 more headers\n\nCandidate 3 (Row 0):\n  col_15 -> 'pickup_cost_from_origin'\n  col_19 -> 'pickup_cost_from_origin'\n  col_23 -> 'export_declaration_fee'\n  col_24 -> 'ata_rate_airport_to_airport_-_sl1'\n  col_30 -> 'ata_rate_airport_to_airport_-_sl2'\n  col_36 -> 'ata_rate_airport_to_airport_-_sl3'\n  col_43 -> 'destination_terminal'\n  col_44 -> 'delivery_cost_to_destination'\n  col_48 -> 'delivery_cost_to_destination'\n  col_52 -> 'brokerage_fee'\n\n\nSA",
+      "ai_result": {
+        "validated_mapping": {
+          "col_15": "pickup_cost_from_origin",
+          "col_19": "pickup_cost_from_origin",
+          "col_23": "export_declaration_fee",
+          "col_24": "ata_rate_airport_to_airport_-_sl1",
+          "col_30": "ata_rate_airport_to_airport_-_sl2",
+          "col_36": "ata_rate_airport_to_airport_-_sl3",
+          "col_43": "destination_terminal",
+          "col_44": "delivery_cost_to_destination",
+          "col_48": "delivery_cost_to_destination",
+          "col_52": "brokerage_fee"
+        },
+        "confidence": 0.9,
+        "reasoning": "Candidate 3 is the most appropriate header mapping. The headers in this candidate are consistent with the logistics and shipping domain. They are clear, meaningful, and use standard industry terminology. Candidates 1 and 2 do not provide meaningful headers and seem to contain data values rather than header names.",
+        "improvements": [
+          "Ensure unique header names for each column to avoid confusion and data misinterpretation. For example, 'pickup_cost_from_origin' is repeated twice.",
+          "Provide more context in header names where necessary. For example, 'ata_rate_airport_to_airport_-_sl1' could be made more understandable with additional context or explanation of 'sl1'.",
+          "Consider standardizing the format of header names for consistency. For example, some headers use underscores while others use hyphens."
+        ]
+      },
+      "confidence": 0.9
+    },
+    "training_files2/(AppliedMat) External CPT Empty_structured.json_20250829_103620": {
+      "timestamp": "2025-08-29T10:36:20.789943",
+      "file_name": "training_files2/(AppliedMat) External CPT Empty_structured.json",
+      "context": "\nFile: training_files2/(AppliedMat) External CPT Empty_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 13):\n  col_15 -> 'pickup_air_ride_per_kg'\n  col_16 -> 'pickup_air_ride_min'\n  col_17 -> 'pickup_air_ride_max'\n  col_19 -> 'pickup_non_air_ride_per_kg'\n  col_20 -> 'pickup_non_air_ride_min'\n  col_21 -> 'pickup_non_air_ride_max'\n  col_23 -> 'export_declaration_fee_per_declaration'\n  col_24 -> 'ata_70kgs'\n  col_25 -> 'ata_71_300_kgs'\n  col_26 -> 'ata_301_1000_kgs'\n  ... and 33 more headers\n\nCandidate 2 (Row 16):\n  col_14 -> 'bid_status'\n  col_15 -> 'pickup_air-ride'\n  col_18 -> 'pickup_air-ride_min/max_error_flag'\n  col_19 -> 'pickup_non-air-ride'\n  col_22 -> 'pickup_non-air-ride_min/max_error_flag'\n  col_23 -> 'export_declaration_fee'\n  col_24 -> 'sl1_<=70_kgs'\n  col_25 -> 'sl1_>70-300_kgs'\n  col_26 -> 'sl1_>300-1000_kgs'\n  col_27 -> 'sl1_>1000-5000_kgs'\n  ... and 52 more headers\n\nCandidate 3 (Row 0):\n  col_15 -> 'pickup_cost_from_origin'\n  col_19 -> 'pickup_cost",
+      "ai_result": {
+        "validated_mapping": {
+          "col_15": "pickup_air_ride_per_kg",
+          "col_16": "pickup_air_ride_min",
+          "col_17": "pickup_air_ride_max",
+          "col_19": "pickup_non_air_ride_per_kg",
+          "col_20": "pickup_non_air_ride_min",
+          "col_21": "pickup_non_air_ride_max",
+          "col_23": "export_declaration_fee_per_declaration",
+          "col_24": "ata_70kgs",
+          "col_25": "ata_71_300_kgs",
+          "col_26": "ata_301_1000_kgs"
+        },
+        "confidence": 0.8,
+        "reasoning": "The first candidate seems to be the most appropriate as it aligns well with the logistics and shipping domain. The headers are clear, consistent, and use standard industry terminology. However, without sample data, it's difficult to fully validate the semantic meaning alignment with the data.",
+        "improvements": [
+          "Provide sample data for better validation of the headers",
+          "Use consistent naming conventions for headers, such as using underscores instead of spaces or hyphens",
+          "Avoid using abbreviations in headers unless they are standard industry terms"
+        ]
+      },
+      "confidence": 0.8
+    },
+    "training_files2/(AppliedMat) External CPT Empty_structured.json_20250829_103633": {
+      "timestamp": "2025-08-29T10:36:33.639510",
+      "file_name": "training_files2/(AppliedMat) External CPT Empty_structured.json",
+      "context": "\nFile: training_files2/(AppliedMat) External CPT Empty_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 13):\n  col_15 -> 'pickup_air_ride_per_kg'\n  col_16 -> 'pickup_air_ride_min'\n  col_17 -> 'pickup_air_ride_max'\n  col_19 -> 'pickup_non_air_ride_per_kg'\n  col_20 -> 'pickup_non_air_ride_min'\n  col_21 -> 'pickup_non_air_ride_max'\n  col_23 -> 'export_declaration_fee_per_declaration'\n  col_24 -> 'ata_70kgs'\n  col_25 -> 'ata_71_300_kgs'\n  col_26 -> 'ata_301_1000_kgs'\n  ... and 33 more headers\n\nCandidate 2 (Row 16):\n  col_14 -> 'bid_status'\n  col_15 -> 'pickup_air-ride'\n  col_18 -> 'pickup_air-ride_min/max_error_flag'\n  col_19 -> 'pickup_non-air-ride'\n  col_22 -> 'pickup_non-air-ride_min/max_error_flag'\n  col_23 -> 'export_declaration_fee'\n  col_24 -> 'sl1_<=70_kgs'\n  col_25 -> 'sl1_>70-300_kgs'\n  col_26 -> 'sl1_>300-1000_kgs'\n  col_27 -> 'sl1_>1000-5000_kgs'\n  ... and 52 more headers\n\nCandidate 3 (Row 0):\n  col_15 -> 'pickup_cost_from_origin'\n  col_19 -> 'pickup_cost",
+      "ai_result": {
+        "validated_mapping": {
+          "col_15": "pickup_air_ride_per_kg",
+          "col_16": "pickup_air_ride_min",
+          "col_17": "pickup_air_ride_max",
+          "col_19": "pickup_non_air_ride_per_kg",
+          "col_20": "pickup_non_air_ride_min",
+          "col_21": "pickup_non_air_ride_max",
+          "col_23": "export_declaration_fee_per_declaration",
+          "col_24": "ata_70kgs",
+          "col_25": "ata_71_300_kgs",
+          "col_26": "ata_301_1000_kgs"
+        },
+        "confidence": 0.8,
+        "reasoning": "The first candidate seems to be the most appropriate as it aligns well with the logistics and shipping domain. The headers are clear, concise, and follow a consistent naming convention. They also seem to represent the correct data types. However, without sample data, it's hard to be completely confident in this mapping.",
+        "improvements": [
+          "Provide sample data for better validation",
+          "Use full words instead of abbreviations for clarity",
+          "Ensure consistency in naming convention, for example, using underscores instead of hyphens"
+        ]
+      },
+      "confidence": 0.8
+    },
+    "training_files2/(AppliedMat) External CPT Empty_structured.json_20250829_103711": {
+      "timestamp": "2025-08-29T10:37:11.260368",
+      "file_name": "training_files2/(AppliedMat) External CPT Empty_structured.json",
+      "context": "\nFile: training_files2/(AppliedMat) External CPT Empty_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 13):\n  col_15 -> 'pickup_air_ride_per_kg'\n  col_16 -> 'pickup_air_ride_min'\n  col_17 -> 'pickup_air_ride_max'\n  col_19 -> 'pickup_non_air_ride_per_kg'\n  col_20 -> 'pickup_non_air_ride_min'\n  col_21 -> 'pickup_non_air_ride_max'\n  col_23 -> 'export_declaration_fee_per_declaration'\n  col_24 -> 'ata_70kgs'\n  col_25 -> 'ata_71_300_kgs'\n  col_26 -> 'ata_301_1000_kgs'\n  ... and 33 more headers\n\nCandidate 2 (Row 16):\n  col_14 -> 'bid_status'\n  col_15 -> 'pickup_air-ride'\n  col_18 -> 'pickup_air-ride_min/max_error_flag'\n  col_19 -> 'pickup_non-air-ride'\n  col_22 -> 'pickup_non-air-ride_min/max_error_flag'\n  col_23 -> 'export_declaration_fee'\n  col_24 -> 'sl1_<=70_kgs'\n  col_25 -> 'sl1_>70-300_kgs'\n  col_26 -> 'sl1_>300-1000_kgs'\n  col_27 -> 'sl1_>1000-5000_kgs'\n  ... and 52 more headers\n\nCandidate 3 (Row 0):\n  col_0 -> 'hide_sheet'\n  col_15 -> 'pickup_cost_from_origin'\n",
+      "ai_result": {
+        "validated_mapping": {
+          "col_15": "pickup_air_ride_per_kg",
+          "col_16": "pickup_air_ride_min",
+          "col_17": "pickup_air_ride_max",
+          "col_19": "pickup_non_air_ride_per_kg",
+          "col_20": "pickup_non_air_ride_min",
+          "col_21": "pickup_non_air_ride_max",
+          "col_23": "export_declaration_fee_per_declaration",
+          "col_24": "ata_70kgs",
+          "col_25": "ata_71_300_kgs",
+          "col_26": "ata_301_1000_kgs"
+        },
+        "confidence": 0.9,
+        "reasoning": "Candidate 1 seems to be the most appropriate as it aligns well with the logistics and shipping domain. The headers are clear, consistent, and use standard industry terminology. They also seem to align well semantically with the data.",
+        "improvements": [
+          "Consider renaming 'ata_70kgs', 'ata_71_300_kgs', and 'ata_301_1000_kgs' to 'ata_up_to_70kgs', 'ata_71_to_300kgs', and 'ata_301_to_1000kgs' for better clarity.",
+          "Consider adding units to 'export_declaration_fee_per_declaration' to make it clear what currency is being used."
+        ]
+      },
+      "confidence": 0.9
+    },
+    "training_files2/(AppliedMat) External CPT Empty_structured.json_20250829_103723": {
+      "timestamp": "2025-08-29T10:37:23.650694",
+      "file_name": "training_files2/(AppliedMat) External CPT Empty_structured.json",
+      "context": "\nFile: training_files2/(AppliedMat) External CPT Empty_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 13):\n  col_15 -> 'pickup_air_ride_per_kg'\n  col_16 -> 'pickup_air_ride_min'\n  col_17 -> 'pickup_air_ride_max'\n  col_19 -> 'pickup_non_air_ride_per_kg'\n  col_20 -> 'pickup_non_air_ride_min'\n  col_21 -> 'pickup_non_air_ride_max'\n  col_23 -> 'export_declaration_fee_per_declaration'\n  col_24 -> 'ata_70kgs'\n  col_25 -> 'ata_71_300_kgs'\n  col_26 -> 'ata_301_1000_kgs'\n  ... and 33 more headers\n\nCandidate 2 (Row 16):\n  col_14 -> 'bid_status'\n  col_15 -> 'pickup_air-ride'\n  col_18 -> 'pickup_air-ride_min/max_error_flag'\n  col_19 -> 'pickup_non-air-ride'\n  col_22 -> 'pickup_non-air-ride_min/max_error_flag'\n  col_23 -> 'export_declaration_fee'\n  col_24 -> 'sl1_<=70_kgs'\n  col_25 -> 'sl1_>70-300_kgs'\n  col_26 -> 'sl1_>300-1000_kgs'\n  col_27 -> 'sl1_>1000-5000_kgs'\n  ... and 52 more headers\n\nCandidate 3 (Row 0):\n  col_15 -> 'pickup_cost_from_origin'\n  col_19 -> 'pickup_cost",
+      "ai_result": {
+        "validated_mapping": {
+          "col_15": "pickup_air_ride_per_kg",
+          "col_16": "pickup_air_ride_min",
+          "col_17": "pickup_air_ride_max",
+          "col_19": "pickup_non_air_ride_per_kg",
+          "col_20": "pickup_non_air_ride_min",
+          "col_21": "pickup_non_air_ride_max",
+          "col_23": "export_declaration_fee_per_declaration",
+          "col_24": "ata_70kgs",
+          "col_25": "ata_71_300_kgs",
+          "col_26": "ata_301_1000_kgs"
+        },
+        "confidence": 0.7,
+        "reasoning": "Without the actual data, it's hard to make a definitive decision. However, based on the header names, Candidate 1 seems to be the most appropriate. The headers are clear, concise, and seem to align with logistics and shipping terminology. The use of 'per_kg' and 'min'/'max' suggest that these columns contain numerical data, which aligns with the expected data types for these fields. However, the confidence level is not at its highest due to the lack of data to confirm the assumptions.",
+        "improvements": [
+          "Provide sample data for better accuracy in header mapping",
+          "Ensure consistency in header naming, for example, using underscores instead of spaces or hyphens",
+          "Use more descriptive header names where possible"
+        ]
+      },
+      "confidence": 0.7
+    },
+    "test_training/(ACCO) External CPT Empty_structured.json_20250829_163418": {
+      "timestamp": "2025-08-29T16:34:18.891456",
+      "file_name": "test_training/(ACCO) External CPT Empty_structured.json",
+      "context": "\nFile: test_training/(ACCO) External CPT Empty_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\n\nSAMPLE DATA (first 3 rows):\n\nRow 0:\n\nRow 1:\n\nRow 2:\n\n\nTASK: Evaluate the candidates and provide the BEST header mapping. Consider:\n1. Business domain appropriateness (logistics, shipping, finance)\n2. Header naming consistency and clarity\n3. Semantic meaning alignment with data\n4. Standard industry terminology\n\nPlease provide your analysis in JSON format.\n",
+      "ai_result": {
+        "validated_mapping": {},
+        "confidence": 0.0,
+        "reasoning": "There is no data provided to evaluate the header mapping. Without data or detection candidates, it's impossible to provide a valid header mapping.",
+        "improvements": [
+          "Provide data for evaluation"
+        ]
+      },
+      "confidence": 0.0
+    },
+    "test_training/(ACCO) External CPT Empty_structured.json_20250829_163421": {
+      "timestamp": "2025-08-29T16:34:21.819713",
+      "file_name": "test_training/(ACCO) External CPT Empty_structured.json",
+      "context": "\nFile: test_training/(ACCO) External CPT Empty_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\n\nSAMPLE DATA (first 3 rows):\n\nRow 0:\n\nRow 1:\n\nRow 2:\n\n\nTASK: Evaluate the candidates and provide the BEST header mapping. Consider:\n1. Business domain appropriateness (logistics, shipping, finance)\n2. Header naming consistency and clarity\n3. Semantic meaning alignment with data\n4. Standard industry terminology\n\nPlease provide your analysis in JSON format.\n",
+      "ai_result": {
+        "validated_mapping": {},
+        "confidence": 0.0,
+        "reasoning": "There is no data provided in the detection candidates or the sample data. Therefore, it's impossible to evaluate or provide a header mapping.",
+        "improvements": [
+          "Provide detection candidates and sample data for evaluation and mapping."
+        ]
+      },
+      "confidence": 0.0
+    }
+  },
+  "learning_patterns": {
+    "positive_indicators": [
+      "pickup",
+      "cost",
+      "from",
+      "origin",
+      "export",
+      "declaration",
+      "fee",
+      "ata",
+      "rate",
+      "airport",
+      "sl1",
+      "sl2",
+      "sl3",
+      "destination",
+      "terminal",
+      "delivery",
+      "brokerage",
+      "air",
+      "ride",
+      "per",
+      "min",
+      "max",
+      "non",
+      "70kgs",
+      "300",
+      "kgs",
+      "301",
+      "1000",
+      "allowable",
+      "accessorials",
+      "g11",
+      "hazmat",
+      "dangerous",
+      "good",
+      "surcharge",
+      "eventnumber",
+      "16.0",
+      "lane",
+      "port"
+    ],
+    "negative_indicators": []
+  }
+}

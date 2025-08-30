@@ -1,0 +1,84 @@
+(ACCO) External CPT Empty_structured.json
+(ACCO) External CPT Filled_structured.json
+(AppliedMat) External CPT Empty_structured.json
+(AppliedMat) External CPT Filled_structured.json
+(Commscope) External CPT Empty_structured.json
+(Commscope) External CPT Filled_structured.json
+(Illumina) External CPT Empty_structured.json
+(Illumina) External CPT Filled_structured.json
+(Logitech 2025) External CPT Empty_structured.json
+(Logitech 2025) External CPT Filled_structured.json
+1. (AMD) External CPT Empty_structured.json
+1. (Copeland) External CPT Empty_structured.json
+1. (Google Cloud) External CPT Empty_structured.json
+1. (SANMINA) External CPT Empty_structured.json
+1. Blank CPT_APEX-AISA+Region-DG(PI967+SEC+I)+Quotation_structured.json
+1. Blank CPT_APEX-ASIA+Region-DG(PI965+IAIB)+Quotation_structured.json
+1. Blank CPT_APEX-ASIA+Region-GC(PI966967+SEC+II)+Quotation_structured.json
+1. Blank CPT_APEX-EA+Region-DG(PI967+SEC+I)+Quotation_structured.json
+1. Blank CPT_APEX-EA+Region-GC(PI966967+SEC+II)+Quotation_structured.json
+1. Blank CPT_APEX-ECA+Region-DG(PI965+IAIB)+Quotation_structured.json
+1. Blank CPT_APEX-ECA+Region-DG(PI967+SEC+I)+Quotation_structured.json
+1. Blank CPT_APEX-ECA+Region-GC(PI966967+SEC+II)+Quotation_structured.json
+1. Blank CPT_APEX-LA+Region-DG(PI965+IAIB)+Quotation_structured.json
+1. Blank CPT_APEX-LA+Region-DG(PI967+SEC+I)+Quotation_structured.json
+1. Blank CPT_APEX-LA+Region-GC(PI966967+SEC+II)+Quotation_structured.json
+1. Blank CPT_APEX-MENA+Region-DG(PI965+IAIB)+Quotation_structured.json
+1. Blank CPT_APEX-MENA+Region-DG(PI967+SEC+I)+Quotation_structured.json
+1. Blank CPT_APEX-MENA+Region-GC(PI966967+SEC+II)+Quotation_structured.json
+1. Blank CPT_APEX-WA+Region-DG(PI967+SEC+I)+Quotation_structured.json
+1. Blank CPT_APEX-WA+Region-GC(PI966967+SEC+II)+Quotation_structured.json
+1. Blank CPT_EUROPE_ASUS RFQ_2025 2H_structured.json
+1. Blank CPT_Global Air Service Rate Agreement- APAC_structured.json
+1. Blank CPT_Global Air Service Rate Agreement- EMEA_structured.json
+1. Blank CPT_MEA_ASUS 2025 2H RFQ_structured.json
+1. Blank CPT_MasterFile Proposal Mini Round - RFQ H1 2025 rev2_structured.json
+1. Blank CPT_RFQ-Flight-June_structured.json
+1. Blank CPT_rate_card_template_T202501160008_structured.json
+1. Blank Customer CPT_2025年-7-9月 空运需求-季度招标_structured.json
+1. Blank Customer CPT_APEX Air Key lanes_20250707 APEX 26Q update_structured.json
+1. Blank Customer CPT_Zebra Air Freight RFQ - Q1 2024-Apex Logistics International Inc_structured.json
+1. Blank_CPT_MGI Aug RFQ_CN+WHS Quotation template 供应商报价模板-202508_structured.json
+1. External CPT Empty - Bitmain Intra Asia CHIP lanes 2025 Q3_structured.json
+1. External CPT Empty- Bid+Form-2025AirRFQ-RFQRound1-Apex_structured.json
+4. (AMD) External CPT Filled_structured.json
+4. (Copeland) External CPT Filled_structured.json
+4. (Google Cloud) External CPT Filled_structured.json
+4. (SANMINA) External CPT Filled_structured.json
+4. External CPT Filled - Bitmain Intra Asia CHIP lanes 2025 Q3_structured.json
+4. External CPT Filled- Bid+Form-2025AirRFQ-RFQRound1-APEX-0214250302_structured.json
+4. Filled CPT_APEX-AISA+Region-DG(PI967+SEC+I)+Quotation - PKG1_structured.json
+4. Filled CPT_APEX-ASIA+Region-DG(PI965+IAIB)+Quotation - PKG2_structured.json
+4. Filled CPT_APEX-ASIA+Region-GC(PI966967+SEC+II)+Quotation - PKG3_structured.json
+4. Filled CPT_APEX-EA+Region-DG(PI967+SEC+I)+Quotation - PKG4_structured.json
+4. Filled CPT_APEX-EA+Region-GC(PI966967+SEC+II)+Quotation - PKG5_structured.json
+4. Filled CPT_APEX-ECA+Region-DG(PI965+IAIB)+Quotation - PKG6_structured.json
+4. Filled CPT_APEX-ECA+Region-DG(PI967+SEC+I)+Quotation - PKG7_structured.json
+4. Filled CPT_APEX-ECA+Region-GC(PI966967+SEC+II)+Quotation - PKG8_structured.json
+4. Filled CPT_APEX-LA+Region-DG(PI965+IAIB)+Quotation - PKG9_structured.json
+4. Filled CPT_APEX-LA+Region-DG(PI967+SEC+I)+Quotation - PKG10_structured.json
+4. Filled CPT_APEX-LA+Region-GC(PI966967+SEC+II)+Quotation - PKG11_structured.json
+4. Filled CPT_APEX-MENA+Region-DG(PI965+IAIB)+Quotation - PKG12_structured.json
+4. Filled CPT_APEX-MENA+Region-DG(PI967+SEC+I)+Quotation - PKG13_structured.json
+4. Filled CPT_APEX-MENA+Region-GC(PI966967+SEC+II)+Quotation - PKG14_structured.json
+4. Filled CPT_APEX-WA+Region-DG(PI967+SEC+I)+Quotation - PKG15_structured.json
+4. Filled CPT_APEX-WA+Region-GC(PI966967+SEC+II)+Quotation - PKG16_structured.json
+4. Filled CPT_EUROPE_ASUS RFQ_2025 2H_structured.json
+4. Filled CPT_Global Air Service Rate Agreement- APAC_structured.json
+4. Filled CPT_Global Air Service Rate Agreement- EMEA_structured.json
+4. Filled CPT_MEA_ASUS 2025 2H RFQ_structured.json
+4. Filled CPT_MasterFile Proposal Mini Round - RFQ H1 2025 rev2_structured.json
+4. Filled CPT_RFQ-Flight-June_structured.json
+4. Filled CPT_rate_card_template_T202501160008 v2_structured.json
+4. Filled Customer CPT_2025年-7-9月 空运需求-季度招标_structured.json
+4. Filled Customer CPT_APEX Air Key lanes_20250707 APEX 26Q update_structured.json
+4. Filled Customer CPT_Zebra Air Freight RFQ - Q1 2024-Apex Logistics International Inc_structured.json
+4.Filled_CPT_MGI Aug RFQ_CN+WHS Quotation template 供应商报价模板-202508_structured.json
+AEO CPT EMPTY_structured.json
+AEO CPT FILLED_structured.json
+Corsair External CPT Empty_structured.json
+Corsair External CPT Filled_structured.json
+Emerson CPT Empty_structured.json
+Emerson CPT Filled_structured.json
+Google DSPA 2025 CPT EMPTY_structured.json
+Google DSPA 2025 CPT FILLED_structured.json

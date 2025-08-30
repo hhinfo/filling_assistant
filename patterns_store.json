@@ -1,0 +1,554 @@
+{
+  "sheets": {
+    "Sheet1": {
+      "header_map": {
+        "service": [
+          "service"
+        ],
+        "origin port": [
+          "origin port"
+        ],
+        "country code": [
+          "country code"
+        ],
+        "destination door (refer to address rfq location tab)": [
+          "destination door (refer to address rfq location tab)"
+        ],
+        "number of shipments": [
+          "number of shipments"
+        ],
+        "total cbm": [
+          "total cbm"
+        ],
+        "total kilos": [
+          "total kilos"
+        ],
+        "carrier name": [
+          "carrier name"
+        ],
+        "min": [
+          "min"
+        ],
+        "new all in +50 cost": [
+          "new all in +50 cost"
+        ],
+        "new all in +1000 cost": [
+          "new all in +1000 cost"
+        ],
+        "new all in +3000 cost": [
+          "new all in +3000 cost"
+        ]
+      },
+      "columns_to_fill": [
+        "carrier name",
+        "min",
+        "new all in +1000 cost",
+        "new all in +3000 cost",
+        "new all in +50 cost",
+        "total cbm",
+        "total kilos"
+      ],
+      "column_positions": {
+        "total cbm": 6,
+        "total kilos": 7,
+        "carrier name": 8,
+        "min": 9,
+        "new all in +50 cost": 10,
+        "new all in +1000 cost": 11,
+        "new all in +3000 cost": 12
+      },
+      "verifications": {
+        "service": {
+          "label": "service",
+          "confidence": 0.95,
+          "method": "mock-exact",
+          "pattern_analysis": {
+            "fillable": false,
+            "confidence": 0.0,
+            "empty_ratio": 1.0,
+            "filled_ratio": 1.0,
+            "empty_count": 92,
+            "filled_count": 92,
+            "total_rows": 92,
+            "reasons": [],
+            "filled_sample_values": [
+              "AIRPORT TO DOOR",
+              "AIRPORT TO DOOR",
+              "AIRPORT TO DOOR",
+              "AIRPORT TO DOOR",
+              "AIRPORT TO DOOR",
+              "AIRPORT TO DOOR",
+              "AIRPORT TO DOOR",
+              "AIRPORT TO DOOR",
+              "AIRPORT TO DOOR",
+              "AIRPORT TO DOOR"
+            ]
+          }
+        },
+        "origin port": {
+          "label": "origin_country",
+          "confidence": 0.6,
+          "method": "mock-fuzzy",
+          "pattern_analysis": {
+            "fillable": false,
+            "confidence": 0.0,
+            "empty_ratio": 1.0,
+            "filled_ratio": 1.0,
+            "empty_count": 92,
+            "filled_count": 92,
+            "total_rows": 92,
+            "reasons": [],
+            "filled_sample_values": [
+              "HONG KONG",
+              "NINGBO",
+              "SHANGHAI",
+              "HANOI",
+              "Ho Chi Minh",
+              "XIAMEN",
+              "TAIPEI",
+              "NINGBO",
+              "BANGKOK",
+              "HANOI"
+            ]
+          }
+        },
+        "country code": {
+          "label": "origin_country",
+          "confidence": 0.6,
+          "method": "mock-fuzzy",
+          "pattern_analysis": {
+            "fillable": false,
+            "confidence": 0.0,
+            "empty_ratio": 1.0,
+            "filled_ratio": 1.0,
+            "empty_count": 92,
+            "filled_count": 92,
+            "total_rows": 92,
+            "reasons": [],
+            "filled_sample_values": [
+              "HK",
+              "CN",
+              "CN",
+              "VN",
+              "VN",
+              "CN",
+              "TW",
+              "CN",
+              "TH",
+              "VN"
+            ]
+          }
+        },
+        "destination door (refer to address rfq location tab)": {
+          "label": "valid_to",
+          "confidence": 0.6,
+          "method": "mock-fuzzy",
+          "pattern_analysis": {
+            "fillable": false,
+            "confidence": 0.0,
+            "empty_ratio": 1.0,
+            "filled_ratio": 1.0,
+            "empty_count": 92,
+            "filled_count": 92,
+            "total_rows": 92,
+            "reasons": [],
+            "filled_sample_values": [
+              "ALEXANDRIA",
+              "ALEXANDRIA",
+              "ALEXANDRIA",
+              "ALEXANDRIA",
+              "ALEXANDRIA",
+              "ALEXANDRIA",
+              "ALEXANDRIA",
+              "ALEXANDRIA",
+              "BOONEVILLE",
+              "BOONEVILLE"
+            ]
+          }
+        },
+        "number of shipments": {
+          "label": "port_of_loading",
+          "confidence": 0.6,
+          "method": "mock-fuzzy",
+          "pattern_analysis": {
+            "fillable": false,
+            "confidence": 0.1,
+            "empty_ratio": 1.0,
+            "filled_ratio": 1.0,
+            "empty_count": 92,
+            "filled_count": 92,
+            "total_rows": 92,
+            "reasons": [
+              "structured_pattern"
+            ],
+            "filled_sample_values": [
+              "min",
+              "min",
+              "min",
+              "min",
+              "min",
+              "min",
+              "min",
+              "min",
+              "1",
+              "min"
+            ]
+          }
+        },
+        "total cbm": {
+          "label": "valid_to",
+          "confidence": 0.7,
+          "method": "mock-fuzzy+pattern",
+          "pattern_analysis": {
+            "fillable": true,
+            "confidence": 0.30000000000000004,
+            "empty_ratio": 1.0,
+            "filled_ratio": 1.0,
+            "empty_count": 92,
+            "filled_count": 92,
+            "total_rows": 92,
+            "reasons": [
+              "numeric_pattern",
+              "structured_pattern"
+            ],
+            "filled_sample_values": [
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1.932",
+              "1"
+            ]
+          }
+        },
+        "total kilos": {
+          "label": "valid_to",
+          "confidence": 0.7,
+          "method": "mock-fuzzy+pattern",
+          "pattern_analysis": {
+            "fillable": true,
+            "confidence": 0.30000000000000004,
+            "empty_ratio": 1.0,
+            "filled_ratio": 1.0,
+            "empty_count": 92,
+            "filled_count": 92,
+            "total_rows": 92,
+            "reasons": [
+              "numeric_pattern",
+              "structured_pattern"
+            ],
+            "filled_sample_values": [
+              "100",
+              "100",
+              "100",
+              "100",
+              "100",
+              "100",
+              "100",
+              "100",
+              "756.409",
+              "100"
+            ]
+          }
+        },
+        "carrier name": {
+          "label": "carrier_choice",
+          "confidence": 0.7,
+          "method": "mock-fuzzy+pattern",
+          "pattern_analysis": {
+            "fillable": true,
+            "confidence": 1.0,
+            "empty_ratio": 0.0,
+            "filled_ratio": 1.0,
+            "empty_count": 0,
+            "filled_count": 92,
+            "total_rows": 92,
+            "reasons": [
+              "empty_to_filled",
+              "value_diversity_increase"
+            ],
+            "filled_sample_values": [
+              "APEX",
+              "APEX",
+              "APEX",
+              "APEX",
+              "APEX",
+              "APEX",
+              "APEX",
+              "APEX",
+              "APEX",
+              "APEX"
+            ]
+          }
+        },
+        "min": {
+          "label": "min_charge_usd",
+          "confidence": 0.7,
+          "method": "mock-fuzzy+pattern",
+          "pattern_analysis": {
+            "fillable": true,
+            "confidence": 1.0,
+            "empty_ratio": 0.0,
+            "filled_ratio": 1.0,
+            "empty_count": 0,
+            "filled_count": 92,
+            "total_rows": 92,
+            "reasons": [
+              "empty_to_filled",
+              "value_diversity_increase",
+              "numeric_pattern",
+              "structured_pattern"
+            ],
+            "filled_sample_values": [
+              "662",
+              "662",
+              "662",
+              "682",
+              "682",
+              "662",
+              "652",
+              "662",
+              "665",
+              "670"
+            ]
+          }
+        },
+        "new all in +50 cost": {
+          "label": "all_in_charge_usd",
+          "confidence": 0.7,
+          "method": "mock-fuzzy+pattern",
+          "pattern_analysis": {
+            "fillable": true,
+            "confidence": 1.0,
+            "empty_ratio": 0.0,
+            "filled_ratio": 1.0,
+            "empty_count": 0,
+            "filled_count": 92,
+            "total_rows": 92,
+            "reasons": [
+              "empty_to_filled",
+              "value_diversity_increase",
+              "numeric_pattern",
+              "structured_pattern"
+            ],
+            "filled_sample_values": [
+              "4.938",
+              "5.178",
+              "4.978",
+              "5.577999999999999",
+              "5.577999999999999",
+              "5.178",
+              "5.538",
+              "5.178",
+              "5.945",
+              "5.765"
+            ]
+          }
+        },
+        "new all in +1000 cost": {
+          "label": "all_in_charge_usd",
+          "confidence": 0.7,
+          "method": "mock-fuzzy+pattern",
+          "pattern_analysis": {
+            "fillable": true,
+            "confidence": 1.0,
+            "empty_ratio": 0.0,
+            "filled_ratio": 1.0,
+            "empty_count": 0,
+            "filled_count": 92,
+            "total_rows": 92,
+            "reasons": [
+              "empty_to_filled",
+              "value_diversity_increase",
+              "numeric_pattern",
+              "structured_pattern"
+            ],
+            "filled_sample_values": [
+              "4.938",
+              "5.178",
+              "4.978",
+              "5.577999999999999",
+              "5.577999999999999",
+              "5.178",
+              "5.538",
+              "5.178",
+              "5.945",
+              "5.765"
+            ]
+          }
+        },
+        "new all in +3000 cost": {
+          "label": "all_in_charge_usd",
+          "confidence": 0.7,
+          "method": "mock-fuzzy+pattern",
+          "pattern_analysis": {
+            "fillable": true,
+            "confidence": 1.0,
+            "empty_ratio": 0.0,
+            "filled_ratio": 1.0,
+            "empty_count": 0,
+            "filled_count": 92,
+            "total_rows": 92,
+            "reasons": [
+              "empty_to_filled",
+              "value_diversity_increase",
+              "numeric_pattern",
+              "structured_pattern"
+            ],
+            "filled_sample_values": [
+              "4.938",
+              "5.178",
+              "4.978",
+              "5.577999999999999",
+              "5.577999999999999",
+              "5.178",
+              "5.538",
+              "5.178",
+              "5.945",
+              "5.765"
+            ]
+          }
+        }
+      },
+      "enhanced_patterns": {
+        "total cbm": {
+          "value_types": [
+            "numeric"
+          ],
+          "common_prefixes": [],
+          "common_suffixes": [],
+          "length_stats": {
+            "min": 1,
+            "max": 5,
+            "avg": 1.4,
+            "median": 1.0
+          },
+          "regex_patterns": []
+        },
+        "total kilos": {
+          "value_types": [
+            "numeric"
+          ],
+          "common_prefixes": [
+            "10"
+          ],
+          "common_suffixes": [
+            "00"
+          ],
+          "length_stats": {
+            "min": 3,
+            "max": 7,
+            "avg": 3.4,
+            "median": 3.0
+          },
+          "regex_patterns": []
+        },
+        "carrier name": {
+          "value_types": [
+            "alphabetic"
+          ],
+          "common_prefixes": [
+            "AP"
+          ],
+          "common_suffixes": [
+            "EX"
+          ],
+          "length_stats": {
+            "min": 4,
+            "max": 4,
+            "avg": 4,
+            "median": 4.0
+          },
+          "regex_patterns": []
+        },
+        "min": {
+          "value_types": [
+            "numeric"
+          ],
+          "common_prefixes": [
+            "66",
+            "68"
+          ],
+          "common_suffixes": [
+            "62",
+            "82"
+          ],
+          "length_stats": {
+            "min": 3,
+            "max": 3,
+            "avg": 3,
+            "median": 3.0
+          },
+          "regex_patterns": []
+        },
+        "new all in +50 cost": {
+          "value_types": [
+            "numeric"
+          ],
+          "common_prefixes": [
+            "5.",
+            "4."
+          ],
+          "common_suffixes": [
+            "78",
+            "38",
+            "99"
+          ],
+          "length_stats": {
+            "min": 5,
+            "max": 17,
+            "avg": 7.4,
+            "median": 5.0
+          },
+          "regex_patterns": []
+        },
+        "new all in +1000 cost": {
+          "value_types": [
+            "numeric"
+          ],
+          "common_prefixes": [
+            "5.",
+            "4."
+          ],
+          "common_suffixes": [
+            "78",
+            "38",
+            "99"
+          ],
+          "length_stats": {
+            "min": 5,
+            "max": 17,
+            "avg": 7.4,
+            "median": 5.0
+          },
+          "regex_patterns": []
+        },
+        "new all in +3000 cost": {
+          "value_types": [
+            "numeric"
+          ],
+          "common_prefixes": [
+            "5.",
+            "4."
+          ],
+          "common_suffixes": [
+            "78",
+            "38",
+            "99"
+          ],
+          "length_stats": {
+            "min": 5,
+            "max": 17,
+            "avg": 7.4,
+            "median": 5.0
+          },
+          "regex_patterns": []
+        }
+      }
+    }
+  }
+}

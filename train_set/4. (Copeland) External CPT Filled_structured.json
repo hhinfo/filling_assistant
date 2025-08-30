@@ -1,0 +1,103 @@
+{
+  "Sheet1": {
+    "columns": [
+      "Lot Description",
+      "ORGN Gateway",
+      "DSTN Gateway",
+      "FY24 Chargeable Weight",
+      "FY24 Shipment Count",
+      "Origin Local Currency",
+      "per KG",
+      "per KG",
+      "Minimum 45 KG",
+      "per KG",
+      "Minimum 45 KG",
+      "per KG",
+      "Minimum 45 KG",
+      "per KG",
+      "Minimum 45 KG",
+      "per KG",
+      "Minimum 45 KG",
+      "ATA - EXPRESS \n(per KG)",
+      "ATA - EXPRESS \n(Min 45KG)",
+      "Transit Time - EXPRESS\n(in days)",
+      "Destination Local Currency",
+      "per KG",
+      "per KG",
+      "Minimum 45 KG",
+      "per KG",
+      "Minimum 45 KG",
+      "per KG",
+      "Minimum 45 KG",
+      "per KG",
+      "Minimum 45 KG",
+      "per KG",
+      "Minimum 45 KG"
+    ],
+    "data": [
+      {
+        "per KG": "[TITLE] Delivery Zone 5\n(1001 to 3000 km straight line distance)"
+      },
+      {
+        "Lot Description": "WS1266320648 GC_Lot_4 - North America-Asia",
+        "ORGN Gateway": "ORD",
+        "DSTN Gateway": "BOM",
+        "FY24 Chargeable Weight": "56843.50999999998",
+        "FY24 Shipment Count": "163",
+        "Origin Local Currency": "USD",
+        "per KG": "623.41",
+        "Minimum 45 KG": "28053.449999999997",
+        "ATA - EXPRESS \n(per KG)": "1.5999999999999999",
+        "ATA - EXPRESS \n(Min 45KG)": "72",
+        "Transit Time - EXPRESS\n(in days)": "3",
+        "Destination Local Currency": "INR"
+      },
+      {
+        "Lot Description": "WS1266320648 GC_Lot_4 - North America-Asia",
+        "ORGN Gateway": "ORD",
+        "DSTN Gateway": "PVG",
+        "FY24 Chargeable Weight": "48110.63000000002",
+        "FY24 Shipment Count": "224",
+        "Origin Local Currency": "USD",
+        "per KG": "2.2",
+        "Minimum 45 KG": "99.00000000000001",
+        "ATA - EXPRESS \n(per KG)": "0.6",
+        "ATA - EXPRESS \n(Min 45KG)": "27",
+        "Transit Time - EXPRESS\n(in days)": "1",
+        "Destination Local Currency": "CNY"
+      },
+      {
+        "Lot Description": "WS1266320648 GC_Lot_4 - North America-Asia",
+        "ORGN Gateway": "ORD",
+        "DSTN Gateway": "NRT",
+        "FY24 Chargeable Weight": "31550.820000000007",
+        "FY24 Shipment Count": "60",
+        "Origin Local Currency": "USD",
+        "per KG": "500",
+        "Minimum 45 KG": "22500",
+        "ATA - EXPRESS \n(per KG)": "1.2000000000000002",
+        "ATA - EXPRESS \n(Min 45KG)": "54.00000000000001",
+        "Transit Time - EXPRESS\n(in days)": "1",
+        "Destination Local Currency": "JPY"
+      },
+      {
+        "Lot Description": "WS1266320648 GC_Lot_4 - North America-Asia",
+        "ORGN Gateway": "GDL",
+        "DSTN Gateway": "BOM",
+        "FY24 Chargeable Weight": "8549",
+        "FY24 Shipment Count": "18",
+        "Origin Local Currency": "MXN",
+        "per KG": "623.41",
+        "Minimum 45 KG": "28053.449999999997",
+        "ATA - EXPRESS \n(per KG)": "9.51",
+        "ATA - EXPRESS \n(Min 45KG)": "427.95",
+        "Transit Time - EXPRESS\n(in days)": "5",
+        "Destination Local Currency": "INR"
+      }
+    ],
+    "shape": [
+      5,
+      32
+    ]
+  }
+}
