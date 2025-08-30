@@ -363,6 +363,15 @@ Latest AI-enhanced system performance:
 - Try different threshold values with `--threshold 0.5` for more inclusive matching
 - Cross-sheet analysis indicator (🔄N) shows how many pattern sources were analyzed
 
+## 📊 Training Data
+
+**Note**: Training files (`train_set/`, `test_set/`, `train_subset/`, `test_subset/`) are excluded from version control for security and privacy reasons. These directories contain business-sensitive data and are managed locally.
+
+- Training files remain on your local system for development
+- New files added to training directories are automatically ignored by git
+- This protects sensitive business data from accidental commits
+- Each developer maintains their own training datasets
+
 ## 🤝 Contributing
 
 The system is designed to be extensible:
