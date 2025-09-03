@@ -119,21 +119,25 @@ def display_training_results(training_results: list, out_store: str, total_pairs
 
 @app.command()
 def train(data_dir: str = typer.Option(..., help="Folder with training JSON files"),
-          out_store: str = typer.Option("patterns_store.json", help="Where to save merged patterns"),
-          sheet: str = typer.Option(None, help="Specific sheet name to learn (if not provided, auto-detects all data sheets)"),
-          enhanced_headers: bool = typer.Option(False, "--enhanced-headers", help="Use AI-enhanced header detection during training"),
+          out_store: str = typer.Option("patterns_store.json", help="Where to save AI-enhanced patterns"),
+          sheet: str = typer.Option(None, help="Specific sheet name to learn (auto-detects all data sheets)"),
           verbose: bool = typer.Option(False, "--verbose", "-v", help="Show detailed processing information")):
-    """Enhanced training - learns fillable column patterns from Empty/Filled file pairs with optional AI-powered header detection"""
-    print(f"[blue]🚀 Starting Enhanced Training on directory:[/blue] {data_dir}")
+    """AI-Enhanced Training - learns fillable patterns with OpenAI-powered business header detection"""
+    
+    # Check for OpenAI availability
+    if not ENHANCED_HEADERS_AVAILABLE:
+        print("[red]❌ Error: OpenAI integration required for AI-enhanced Filing Assistant[/red]")
+        print("[yellow]Please install OpenAI: pip install openai[/yellow]") 
+        print("[yellow]And set API key: export OPENAI_API_KEY='your-key'[/yellow]")
+        raise typer.Exit(code=1)
+    
+    print(f"[blue]🚀 Starting AI-Enhanced Training on directory:[/blue] {data_dir}")
     if sheet:
         print(f"[blue]📊 Target sheet:[/blue] {sheet}")
     else:
         print(f"[blue]📊 Auto-detecting data sheets in each file[/blue]")
     print(f"[blue]💾 Output store:[/blue] {out_store}")
-    if enhanced_headers:
-        print(f"[blue]🤖 Enhanced headers:[/blue] ENABLED")
-    else:
-        print(f"[blue]📊 Enhanced headers:[/blue] Standard (use --enhanced-headers for AI detection)")
+    print(f"[blue]🤖 AI Enhancement:[/blue] OpenAI-powered business header detection ENABLED")
     print()
     
     # Discover and display all available pairs
@@ -172,7 +176,7 @@ def train(data_dir: str = typer.Option(..., help="Folder with training JSON file
         print(f"[dim]🔄 Processing pair {i}/{len(pairs)}: {pair_name}[/dim]")
         
         try:
-            learned = enhanced_learn_from_pair(empty, filled, sheet, verbose=verbose, use_enhanced_headers=enhanced_headers)
+            learned = enhanced_learn_from_pair(empty, filled, sheet, verbose=verbose, use_enhanced_headers=True)
             store = enhanced_merge_patterns(store, learned)
             
             # Collect training results for summary
@@ -199,39 +203,37 @@ def train(data_dir: str = typer.Option(..., help="Folder with training JSON file
 
 @app.command()
 def identify(file: str = typer.Option(..., help="New empty JSON file"),
-             store: str = typer.Option("patterns_store.json", help="Learned patterns store"),
+             store: str = typer.Option("patterns_store.json", help="AI-enhanced patterns store"),
              sheet: str = typer.Option(None, help="Sheet name to identify (auto-detect if not specified)"),
              out: str = typer.Option(None, help="Optional path to write JSON result"),
              threshold: float = typer.Option(0.7, help="Confidence threshold for auto-accept mapping"),
-             enhanced_headers: bool = typer.Option(False, "--enhanced-headers", help="Use AI-enhanced header detection"),
-             cross_sheet: bool = typer.Option(False, "--cross-sheet", help="Use cross-sheet pattern analysis for better matching"),
              verbose: bool = typer.Option(False, help="Show detailed processing information")):
+    """AI-Enhanced Identification - identifies fillable columns with cross-sheet pattern analysis and OpenAI headers"""
+    
+    # Check for OpenAI availability
+    if not ENHANCED_HEADERS_AVAILABLE:
+        print("[red]❌ Error: OpenAI integration required for AI-enhanced Filing Assistant[/red]")
+        print("[yellow]Please install OpenAI: pip install openai[/yellow]") 
+        print("[yellow]And set API key: export OPENAI_API_KEY='your-key'[/yellow]")
+        raise typer.Exit(code=1)
+    
     st = load_store(store)
     
     if verbose:
-        print(f"[bold blue]🔍 Identifying fillable columns in:[/bold blue] {file}")
+        print(f"[bold blue]🔍 AI-Enhanced Identification for:[/bold blue] {file}")
         if sheet:
             print(f"[dim]📋 Target sheet: {sheet}[/dim]")
         else:
             print(f"[dim]📋 Auto-detecting all sheets[/dim]")
         print(f"[dim]📊 Confidence threshold: {threshold}[/dim]")
-        if enhanced_headers:
-            print(f"[dim]🤖 Enhanced header detection: ENABLED[/dim]")
-        if cross_sheet:
-            print(f"[dim]🔄 Cross-sheet pattern analysis: ENABLED[/dim]")
+        print(f"[dim]🤖 Enhanced header detection: ENABLED[/dim]")
+        print(f"[dim]🔄 Cross-sheet pattern analysis: ENABLED[/dim]")
         print()
     
-    # Choose identification method based on flags
-    if cross_sheet:
-        from .cross_sheet_analyzer import cross_sheet_identify_required_columns
-        result = cross_sheet_identify_required_columns(file, st, sheet, threshold, enhanced_headers)
-        is_cross_sheet = True
-    elif enhanced_headers:
-        result = enhanced_identify_required_columns(file, st, sheet, threshold, use_enhanced_headers=True)
-        is_cross_sheet = False
-    else:
-        result = identify_required_columns(file, st, sheet, threshold)
-        is_cross_sheet = result.get("cross_sheet_analysis", False)
+    # Always use cross-sheet analysis with enhanced headers
+    from .cross_sheet_analyzer import cross_sheet_identify_required_columns
+    result = cross_sheet_identify_required_columns(file, st, sheet, threshold, True)
+    is_cross_sheet = True
     
     # Handle cross-sheet results format
     if is_cross_sheet and "primary_results" in result:
@@ -278,10 +280,8 @@ def identify(file: str = typer.Option(..., help="New empty JSON file"),
         tbl.add_column("Conf", justify="right")
         tbl.add_column("Method")
         tbl.add_column("Decision")
-        if enhanced_headers or cross_sheet:
-            tbl.add_column("Enhanced", justify="center")
-        if cross_sheet:
-            tbl.add_column("Sources", justify="center")
+        tbl.add_column("Enhanced", justify="center")
+        tbl.add_column("Sources", justify="center")
         
         # Add fillable columns
         for r in sheet_data.get("columns", []):
@@ -297,17 +297,17 @@ def identify(file: str = typer.Option(..., help="New empty JSON file"),
                 r["decision"]
             ]
             
-            if enhanced_headers or cross_sheet:
-                enhanced_marker = "🤖" if r.get("enhanced_header") else "📊"
-                row_data.append(enhanced_marker)
+            # Always show enhanced headers indicator
+            enhanced_marker = "🤖" if r.get("enhanced_header") else "📊"
+            row_data.append(enhanced_marker)
             
-            if cross_sheet:
-                source_patterns = r.get("source_patterns", [])
-                if source_patterns:
-                    source_indicator = f"🔄{len(source_patterns)}"
-                else:
-                    source_indicator = "📋1"
-                row_data.append(source_indicator)
+            # Always show source patterns count
+            source_patterns = r.get("source_patterns", [])
+            if source_patterns:
+                source_indicator = f"🔄{len(source_patterns)}"
+            else:
+                source_indicator = "📋1"
+            row_data.append(source_indicator)
             
             tbl.add_row(*row_data)
         
@@ -327,17 +327,17 @@ def identify(file: str = typer.Option(..., help="New empty JSON file"),
                     f"[dim]{r['decision']}[/dim]"
                 ]
                 
-                if enhanced_headers or cross_sheet:
-                    enhanced_marker = "🤖" if r.get("enhanced_header") else "📊"
-                    row_data.append(f"[dim]{enhanced_marker}[/dim]")
+                # Always show enhanced headers indicator
+                enhanced_marker = "🤖" if r.get("enhanced_header") else "📊"
+                row_data.append(f"[dim]{enhanced_marker}[/dim]")
                 
-                if cross_sheet:
-                    source_patterns = r.get("source_patterns", [])
-                    if source_patterns:
-                        source_indicator = f"🔄{len(source_patterns)}"
-                    else:
-                        source_indicator = "📋1"
-                    row_data.append(f"[dim]{source_indicator}[/dim]")
+                # Always show source patterns count
+                source_patterns = r.get("source_patterns", [])
+                if source_patterns:
+                    source_indicator = f"🔄{len(source_patterns)}"
+                else:
+                    source_indicator = "📋1"
+                row_data.append(f"[dim]{source_indicator}[/dim]")
                 
                 tbl.add_row(*row_data)
         

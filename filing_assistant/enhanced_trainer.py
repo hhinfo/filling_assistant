@@ -181,31 +181,28 @@ def learn_value_patterns(column_values: List[str]) -> Dict[str, Any]:
     
     return patterns
 
-def enhanced_learn_from_pair(empty_file, filled_file, target_sheet=None, verbose=False, use_enhanced_headers=False):
+def enhanced_learn_from_pair(empty_file, filled_file, target_sheet=None, verbose=False, use_enhanced_headers=True):
     """
-    Enhanced learning with improved accuracy for fillable column identification
-    and optional AI-powered header detection
+    AI-Enhanced learning - always uses OpenAI-powered header detection for business intelligence
     """
+    if not ENHANCED_HEADERS_AVAILABLE:
+        raise ValueError("OpenAI integration required for AI-enhanced Filing Assistant. Please install openai and set OPENAI_API_KEY.")
+    
     if verbose:
-        print(f"🧠 Enhanced learning from pair:")
+        print(f"🧠 AI-Enhanced learning from pair:")
         print(f"   📝 Empty:  {os.path.basename(empty_file)}")
         print(f"   ✅ Filled: {os.path.basename(filled_file)}")
-        if use_enhanced_headers and ENHANCED_HEADERS_AVAILABLE:
-            print(f"   🤖 Enhanced headers: ENABLED")
-        elif use_enhanced_headers and not ENHANCED_HEADERS_AVAILABLE:
-            print(f"   ⚠️ Enhanced headers requested but not available - using basic headers")
+        print(f"   🤖 OpenAI business header detection: ENABLED")
     
-    # Initialize enhanced header detector if requested and available
-    header_detector = None
-    if use_enhanced_headers and ENHANCED_HEADERS_AVAILABLE:
-        try:
-            header_detector = EnhancedHeaderDetector()
-            if verbose:
-                print(f"   🤖 Enhanced header detector initialized")
-        except Exception as e:
-            if verbose:
-                print(f"   ⚠️ Could not initialize enhanced header detector: {e}")
-            header_detector = None
+    # Always initialize enhanced header detector
+    try:
+        header_detector = EnhancedHeaderDetector()
+        if verbose:
+            print(f"   🤖 OpenAI header detector initialized")
+    except Exception as e:
+        if verbose:
+            print(f"   ❌ Could not initialize OpenAI header detector: {e}")
+        raise ValueError(f"Failed to initialize OpenAI header detector: {e}")
     
     ej, fj = load_json(empty_file), load_json(filled_file)
     
@@ -243,38 +240,38 @@ def enhanced_learn_from_pair(empty_file, filled_file, target_sheet=None, verbose
         f_headers, f_hidx = detect_header_row(fs)
         headers = e_headers if sum(len(h) for h in e_headers) >= sum(len(h) for h in f_headers) else f_headers
         
-        # Apply enhanced header detection if enabled
+        # Always apply enhanced header detection with OpenAI
         enhanced_headers_used = False
-        if header_detector and use_enhanced_headers:
-            try:
-                # Use the filled file for better header detection (more complete data)
-                enhanced_result = header_detector.detect_headers_enhanced(fs, filled_file, current_sheet)
-                if enhanced_result and isinstance(enhanced_result, tuple) and len(enhanced_result) >= 2:
-                    enhanced_headers, confidence = enhanced_result[:2]
-                    if enhanced_headers and confidence > 0.7:  # Require high confidence
-                        # Update headers with enhanced headers
-                        for idx, enhanced_header in enhanced_headers.items():
-                            if idx < len(headers):
-                                headers[idx] = enhanced_header
-                        enhanced_headers_used = True
-                        if verbose:
-                            print(f"      🤖 Enhanced headers applied: {len(enhanced_headers)} business headers detected (conf: {confidence:.1%})")
-                    else:
-                        if verbose:
-                            print(f"      📊 Enhanced headers available but low confidence ({confidence:.1%}), using basic headers")
+        try:
+            # Use the filled file for better header detection (more complete data)
+            enhanced_result = header_detector.detect_headers_enhanced(fs, filled_file, current_sheet)
+            if enhanced_result and isinstance(enhanced_result, tuple) and len(enhanced_result) >= 2:
+                enhanced_headers, confidence = enhanced_result[:2]
+                if enhanced_headers and confidence > 0.7:  # Require high confidence
+                    # Update headers with enhanced headers
+                    for idx, enhanced_header in enhanced_headers.items():
+                        if idx < len(headers):
+                            headers[idx] = enhanced_header
+                    enhanced_headers_used = True
+                    if verbose:
+                        print(f"      🤖 OpenAI business headers applied: {len(enhanced_headers)} headers detected (conf: {confidence:.1%})")
                 else:
                     if verbose:
-                        print(f"      📊 Enhanced headers failed, using basic headers")
-            except Exception as e:
+                        print(f"      📊 OpenAI headers available but low confidence ({confidence:.1%}), using basic headers")
+            else:
                 if verbose:
-                    print(f"      ⚠️ Enhanced header detection error: {e}")
+                    print(f"      📊 OpenAI header detection failed, using basic headers")
+        except Exception as e:
+            if verbose:
+                print(f"      ⚠️ OpenAI header detection error: {e}")
+            # Don't fail the whole process for header detection errors
         
         value_cols = list_value_columns(headers)
 
         if verbose:
-            header_type = "🤖 Enhanced business headers" if enhanced_headers_used else "📊 Basic headers"
+            header_type = "🤖 OpenAI business headers" if enhanced_headers_used else "📊 Fallback basic headers"
             print(f"      📋 {header_type} detected: {len(headers)} columns")
-            print(f"      🔍 Enhanced analyzing {len(value_cols)} value columns")
+            print(f"      🔍 AI-Enhanced analyzing {len(value_cols)} value columns")
 
         e_cols, e_rows = es.get("columns", []), es.get("data", [])[e_hidx+1:]
         f_cols, f_rows = fs.get("columns", []), fs.get("data", [])[f_hidx+1:]

@@ -194,34 +194,14 @@ def enhanced_identify_required_columns(empty_file: str, store: Dict[str, Any], s
 
 def identify_required_columns(empty_file: str, store: Dict[str, Any], sheet_name: str = None, threshold: float = 0.7) -> Dict[str, Any]:
     """
-    Main identification function - uses cross-sheet pattern analysis with enhanced headers
+    AI-Enhanced identification - always uses cross-sheet pattern analysis with OpenAI headers
     
-    This function first attempts cross-sheet analysis for better pattern matching,
-    then falls back to traditional sheet-first matching if needed.
+    This function uses the most advanced pattern matching available for optimal results.
     """
-    # Try cross-sheet analysis first for better pattern matching
-    try:
-        cross_sheet_results = cross_sheet_identify_required_columns(
-            empty_file, store, sheet_name, threshold, use_enhanced_headers=True
-        )
-        
-        # Check if cross-sheet analysis found good results
-        primary_results = cross_sheet_results.get("primary_results", {})
-        if primary_results and "columns" in primary_results:
-            columns = primary_results["columns"]
-            if columns:
-                avg_confidence = sum(c["confidence"] for c in columns) / len(columns)
-                # If high quality results, use cross-sheet analysis
-                if avg_confidence >= threshold * 0.8:
-                    return cross_sheet_results
-        
-        # Fallback to enhanced sheet-first matching
-        print("⚠️ Cross-sheet analysis yielded low confidence, falling back to sheet-first matching")
-        return enhanced_identify_required_columns(empty_file, store, sheet_name, threshold, use_enhanced_headers=True)
-        
-    except Exception as e:
-        print(f"⚠️ Cross-sheet analysis failed: {e}, falling back to enhanced identification")
-        return enhanced_identify_required_columns(empty_file, store, sheet_name, threshold, use_enhanced_headers=True)
+    # Always use cross-sheet analysis with enhanced headers for best results
+    return cross_sheet_identify_required_columns(
+        empty_file, store, sheet_name, threshold, use_enhanced_headers=True
+    )
 
 def basic_identify_required_columns(empty_file: str, store: Dict[str, Any], sheet_name: str = None, threshold: float = 0.7) -> Dict[str, Any]:
     """Original identification method"""

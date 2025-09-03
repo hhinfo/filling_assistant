@@ -1,15 +1,15 @@
 # Filing Assistant — AI-Powered Document Intelligence System
 
-Filing Assistant is an intelligent system that **learns** which columns in your Excel→JSON templates must be filled and then **identifies** those columns for any new empty file. The system features automatic sheet detection, multi-sheet processing, **OpenAI-powered header detection**, **cross-sheet pattern analysis**, and advanced business intelligence for superior accuracy.
+Filing Assistant is an intelligent system that **learns** which columns in your Excel→JSON templates must be filled and then **identifies** those columns for any new empty file. The system features **OpenAI-powered business header detection**, **cross-sheet pattern analysis**, and advanced business intelligence for superior accuracy.
 
-> **📁 Project Status**: Production-ready with AI enhancement and cross-sheet analysis (August 30, 2025) - Complete OpenAI integration with cross-domain pattern matching. See [ENHANCED_WORKFLOW.md](ENHANCED_WORKFLOW.md) for details.
+> **📁 Project Status**: Production-ready AI-Enhanced System (September 3, 2025) - Complete OpenAI integration with cross-domain pattern matching and simplified AI-only workflow.
 
 ## 🌟 Key Features
 
+- **🤖 AI-Powered Header Detection**: Uses OpenAI for intelligent business terminology mapping
 - **🔄 Cross-Sheet Analysis**: Analyzes patterns from ALL learned sheets for optimal matching
 - **📊 Multi-Sheet Support**: Handles multiple sheets per file with different structures  
-- **🤖 AI-Powered Header Detection**: Uses OpenAI for intelligent business header mapping
-- **✨ Enhanced Pattern Learning**: Advanced 5-strategy detection with business terminology
+- **✨ Advanced Pattern Learning**: 5-strategy detection with business terminology
 - **📈 Quality-First Matching**: Selects best patterns regardless of sheet origin
 - **🎯 High Accuracy**: 95% confidence on business headers with cross-domain intelligence
 - **🔍 Verbose Mode**: Detailed processing with cross-sheet analysis indicators
@@ -21,8 +21,8 @@ Filing Assistant is an intelligent system that **learns** which columns in your 
 
 **AI-Enhanced Training**: Feed pairs of `empty` and `filled` JSON files. The system:
 - Auto-detects all data sheets in each file pair
-- Applies 5-strategy header detection (pattern, structural, template, historical, OpenAI)
-- Learns business terminology patterns with cross-domain intelligence
+- Applies OpenAI-powered business header detection for meaningful terminology
+- Learns business patterns with cross-domain intelligence
 - Uses multi-factor confidence scoring with AI validation
 - Stores patterns with enhanced business context for cross-sheet analysis
 - Displays comprehensive training results with AI enhancement indicators
@@ -33,7 +33,6 @@ Filing Assistant is an intelligent system that **learns** which columns in your 
 - Applies AI-enhanced header detection for business terminology
 - Provides cross-sheet pattern source attribution (🔄N indicators)
 - Shows detailed results with confidence explanations and pattern origins
-- Maintains backward compatibility with traditional sheet-first matching
 
 ## 📁 File Format Support
 
@@ -49,46 +48,56 @@ The system works with JSON files exported from Excel-like sheets:
 }
 ```
 
-## Quick Start
+## 🚀 Quick Start
 
-### Setup Environment
+### Prerequisites
 ```bash
+# Required: OpenAI API key for AI enhancement
+export OPENAI_API_KEY="your-openai-api-key"
+
 # Install dependencies
 pip install -r requirements.txt
-
-# Set up OpenAI API key for enhanced header detection
-export OPENAI_API_KEY="your-openai-api-key"
-# or create .env file with: OPENAI_API_KEY=your-openai-api-key
 ```
 
-### Training with Enhanced AI Features
-
-1. **Enhanced Training** (learns fillable patterns with AI header mapping):
+### 1. **AI-Enhanced Training**
 ```bash
-# Full AI enhancement with OpenAI-powered business header detection
-python -m filing_assistant.cli train --data-dir "training_files2" --enhanced-headers --verbose
-
-# Standard enhanced training (pattern learning without AI headers)
+# Learn fillable patterns with OpenAI-powered business header detection
 python -m filing_assistant.cli train --data-dir "training_files2" --verbose
 ```
 
-2. **Identify Fillable Columns** (with cross-sheet analysis):
+### 2. **AI-Enhanced Identification**
 ```bash
-# Full AI enhancement with cross-sheet pattern analysis
-python -m filing_assistant.cli identify --file "your_file.json" --cross-sheet --enhanced-headers --verbose
-
-# Enhanced headers only
-python -m filing_assistant.cli identify --file "your_file.json" --enhanced-headers --verbose
-
-# Standard enhanced patterns
+# Identify fillable columns with cross-sheet pattern analysis
 python -m filing_assistant.cli identify --file "your_file.json" --verbose
 ```
 
-The system will output a rich table showing which columns it recommends filling, with:
-- **Business header names** (🤖) when using `--enhanced-headers`
-- **Cross-sheet pattern sources** (🔄N) when using `--cross-sheet`
-- **Confidence scores** and detailed reasoning
-- **Pattern source attribution** for transparency
+### Example Output
+```
+🔍 AI-Enhanced Identification for: (ACCO) External CPT Empty.json
+📋 Auto-detecting all sheets
+📊 Confidence threshold: 0.7
+🤖 Enhanced header detection: ENABLED
+🔄 Cross-sheet pattern analysis: ENABLED
+
+🔄 Cross-sheet analysis completed: Analyzed 15 pattern sources
+✨ Best sheet identified: Bid Sheet
+
+Columns to Fill — Bid Sheet
+┏━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Pos ┃ Header               ┃ Label        ┃ Conf ┃ Method                      ┃ Decision ┃ Enhanced  ┃ Sources ┃
+┡━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━┩
+│  12 │ carrier_name         │ carrier_name │ 0.85 │ cross_sheet_pattern_match   │ INCLUDE  │ 🤖        │ 🔄5     │
+│  15 │ origin_port          │ origin_port  │ 0.88 │ cross_sheet_pattern_match   │ INCLUDE  │ 🤖        │ 🔄3     │
+│  18 │ destination_port     │ dest_port    │ 0.82 │ cross_sheet_pattern_match   │ INCLUDE  │ 🤖        │ 🔄4     │
+│  22 │ freight_rate         │ rate         │ 0.90 │ cross_sheet_pattern_match   │ INCLUDE  │ 🤖        │ 🔄7     │
+└─────┴──────────────────────┴──────────────┴──────┴─────────────────────────────┴──────────┴───────────┴─────────┘
+
+📊 Summary:
+  Sheets processed: 1
+  Fillable columns: 4
+  Cross-sheet analysis: 15 pattern sources analyzed 🔄
+  Enhanced headers: ENABLED 🤖
+```
 
 ## 📊 Production-Ready Results
 
@@ -337,21 +346,21 @@ Latest AI-enhanced system performance:
 
 ### Common Issues
 
+**"OpenAI integration required" error**:
+- Set OpenAI API key: `export OPENAI_API_KEY="your-openai-api-key"`
+- Install OpenAI package: `pip install openai`
+- Check internet connectivity and API credits
+- AI enhancement is required for all operations
+
 **"No matching sheets found"**:
-- Try using `--cross-sheet` flag for better pattern matching across all learned sheets
 - Use `--verbose` to see available vs learned sheets and cross-sheet analysis results
 - The file may contain sheets that weren't included in training data
+- Cross-sheet analysis automatically finds best patterns across all learned sheets
 
 **Low confidence scores**:
-- Enable `--enhanced-headers` for AI-powered business terminology detection
-- Use `--cross-sheet` to find better pattern matches from other learned sheets
 - Column headers may be very different from training data
 - Consider using the `update` command to provide user corrections
-
-**Enhanced header detection not working**:
-- Verify OpenAI API key is set: `export OPENAI_API_KEY="your-key"`
-- Check internet connectivity and API credits
-- System will fall back to standard headers if AI enhancement fails
+- AI headers and cross-sheet analysis are always enabled for maximum accuracy
 
 **Files not being paired during training**:
 - Ensure filenames contain "Empty" and "Filled" consistently
