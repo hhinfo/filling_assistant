@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "created": "2025-09-03T17:59:59.547860",
+    "total_decisions": 4,
+    "accuracy_feedback": {}
+  },
+  "decisions": {
+    "training_files2/(Logitech 2025) External CPT Empty_structured.json_20250903_180002": {
+      "timestamp": "2025-09-03T18:00:02.066741",
+      "file_name": "training_files2/(Logitech 2025) External CPT Empty_structured.json",
+      "context": "\nFile: training_files2/(Logitech 2025) External CPT Empty_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\n\nSAMPLE DATA (first 3 rows):\n\nRow 0:\n\nRow 1:\n\nRow 2:\n\n\nTASK: Evaluate the candidates and provide the BEST header mapping. Consider:\n1. Business domain appropriateness (logistics, shipping, finance)\n2. Header naming consistency and clarity\n3. Semantic meaning alignment with data\n4. Standard industry terminology\n\nPlease provide your analysis in JSON format.\n",
+      "ai_result": {
+        "validated_mapping": {},
+        "confidence": 0.0,
+        "reasoning": "There is no data provided to evaluate and map the headers. Therefore, no mapping or confidence score can be provided.",
+        "improvements": [
+          "Provide data for evaluation and mapping."
+        ]
+      },
+      "confidence": 0.0
+    },
+    "training_files2/(Logitech 2025) External CPT Empty_structured.json_20250903_180017": {
+      "timestamp": "2025-09-03T18:00:17.471988",
+      "file_name": "training_files2/(Logitech 2025) External CPT Empty_structured.json",
+      "context": "\nFile: training_files2/(Logitech 2025) External CPT Empty_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 2):\n  col_0 -> 'complete_bid'\n  col_1 -> 'lot_id'\n  col_2 -> 'mode'\n  col_3 -> 'lane_id'\n  col_4 -> 'valid_from'\n  col_5 -> 'valid_to'\n  col_6 -> 'origin_country'\n  col_7 -> 'origin_state'\n  col_8 -> 'origin_city'\n  col_9 -> 'port_of_loading'\n  ... and 28 more headers\n\nCandidate 2 (Row 4):\n  col_1 -> 'air_1136'\n  col_2 -> 'air'\n  col_3 -> 'air_1136'\n  col_4 -> '2025-10-01_00:00:00'\n  col_5 -> '2026-09-30_00:00:00'\n  col_6 -> 'cn'\n  col_8 -> 'suzhou'\n  col_9 -> 'pvg'\n  col_11 -> 'nar_inbound'\n  col_12 -> 'us'\n  ... and 7 more headers\n\nCandidate 3 (Row 3):\n  col_4 -> 'rate_validity:_valid_from_date'\n  col_5 -> 'rate_validity:_valid_to_date'\n  col_10 -> 'alternate_port_of_loading_--_please_discuss_with_logitech_before_suggesting.'\n  col_11 -> 'package_name_--_see_awarding_criteria_in_document_01_for_more_details.'\n  col_18 -> 'please_refer_to_the_requirements_i",
+      "ai_result": {
+        "validated_mapping": {
+          "col_0": "complete_bid",
+          "col_1": "lot_id",
+          "col_2": "mode",
+          "col_3": "lane_id",
+          "col_4": "valid_from",
+          "col_5": "valid_to",
+          "col_6": "origin_country",
+          "col_7": "origin_state",
+          "col_8": "origin_city",
+          "col_9": "port_of_loading"
+        },
+        "confidence": 0.95,
+        "reasoning": "Candidate 1 is chosen as the best header mapping. The headers in this candidate are consistent with the logistics and shipping domain. They are clear, concise, and align with the semantic meaning of the data. The headers in Candidate 2 seem to be data values rather than headers, and the headers in Candidate 3 are too verbose and not standard industry terminology.",
+        "improvements": [
+          "Headers could be more descriptive to provide more context. For example, 'complete_bid' could be 'bid_status', 'lot_id' could be 'shipment_lot_id', and 'mode' could be 'transportation_mode'.",
+          "Date fields could include the format for clarity, such as 'valid_from_date (YYYY-MM-DD)'.",
+          "For 'origin_country', 'origin_state', and 'origin_city', it would be helpful to specify that these are codes, if applicable."
+        ]
+      },
+      "confidence": 0.95
+    },
+    "training_files2/(Logitech 2025) External CPT Empty_structured.json_20250903_180148": {
+      "timestamp": "2025-09-03T18:01:48.377334",
+      "file_name": "training_files2/(Logitech 2025) External CPT Empty_structured.json",
+      "context": "\nFile: training_files2/(Logitech 2025) External CPT Empty_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\n\nSAMPLE DATA (first 3 rows):\n\nRow 0:\n\nRow 1:\n\nRow 2:\n\n\nTASK: Evaluate the candidates and provide the BEST header mapping. Consider:\n1. Business domain appropriateness (logistics, shipping, finance)\n2. Header naming consistency and clarity\n3. Semantic meaning alignment with data\n4. Standard industry terminology\n\nPlease provide your analysis in JSON format.\n",
+      "ai_result": {
+        "validated_mapping": {},
+        "confidence": 0.0,
+        "reasoning": "There is no data provided in the detection candidates or the sample data. Therefore, it's impossible to evaluate or provide a header mapping.",
+        "improvements": [
+          "Ensure that the data extraction process is working correctly and that the data is not missing or corrupted."
+        ]
+      },
+      "confidence": 0.0
+    },
+    "training_files2/(Logitech 2025) External CPT Empty_structured.json_20250903_180158": {
+      "timestamp": "2025-09-03T18:01:58.899101",
+      "file_name": "training_files2/(Logitech 2025) External CPT Empty_structured.json",
+      "context": "\nFile: training_files2/(Logitech 2025) External CPT Empty_structured.json\nSheet: columns\n\nDETECTION CANDIDATES:\n\nCandidate 1 (Row 2):\n  col_0 -> 'complete_bid'\n  col_1 -> 'lot_id'\n  col_2 -> 'mode'\n  col_3 -> 'lane_id'\n  col_4 -> 'valid_from'\n  col_5 -> 'valid_to'\n  col_6 -> 'origin_country'\n  col_7 -> 'origin_state'\n  col_8 -> 'origin_city'\n  col_9 -> 'port_of_loading'\n  ... and 28 more headers\n\nCandidate 2 (Row 4):\n  col_1 -> 'air_1136'\n  col_2 -> 'air'\n  col_3 -> 'air_1136'\n  col_4 -> '2025-10-01_00:00:00'\n  col_5 -> '2026-09-30_00:00:00'\n  col_6 -> 'cn'\n  col_8 -> 'suzhou'\n  col_9 -> 'pvg'\n  col_11 -> 'nar_inbound'\n  col_12 -> 'us'\n  ... and 7 more headers\n\nCandidate 3 (Row 3):\n  col_4 -> 'rate_validity:_valid_from_date'\n  col_5 -> 'rate_validity:_valid_to_date'\n  col_10 -> 'alternate_port_of_loading_--_please_discuss_with_logitech_before_suggesting.'\n  col_11 -> 'package_name_--_see_awarding_criteria_in_document_01_for_more_details.'\n  col_18 -> 'please_refer_to_the_requirements_i",
+      "ai_result": {
+        "validated_mapping": {
+          "col_0": "complete_bid",
+          "col_1": "lot_id",
+          "col_2": "mode",
+          "col_3": "lane_id",
+          "col_4": "valid_from",
+          "col_5": "valid_to",
+          "col_6": "origin_country",
+          "col_7": "origin_state",
+          "col_8": "origin_city",
+          "col_9": "port_of_loading"
+        },
+        "confidence": 0.95,
+        "reasoning": "Candidate 1 is the most suitable for header mapping. The headers are clear, concise, and align with the logistics and shipping domain. They are also consistent with standard industry terminology. The headers in Candidate 2 seem to be data rather than headers, and the headers in Candidate 3 are too verbose and not standard.",
+        "improvements": [
+          "Headers could be more descriptive to provide more context. For example, 'complete_bid' could be 'bid_status', 'lot_id' could be 'shipment_lot_id', and 'mode' could be 'transportation_mode'.",
+          "Date fields could include the format for clarity, such as 'valid_from_date (YYYY-MM-DD)'.",
+          "For 'origin_country', 'origin_state', and 'origin_city', it would be helpful to specify that these are codes (if they are), such as 'origin_country_code'."
+        ]
+      },
+      "confidence": 0.95
+    }
+  },
+  "learning_patterns": {
+    "positive_indicators": [
+      "complete",
+      "bid",
+      "lot",
+      "mode",
+      "lane",
+      "valid",
+      "from",
+      "origin",
+      "country",
+      "state",
+      "city",
+      "port",
+      "loading"
+    ],
+    "negative_indicators": []
+  }
+}

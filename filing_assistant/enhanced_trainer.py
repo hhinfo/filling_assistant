@@ -14,11 +14,7 @@ import statistics
 
 # Import enhanced header detector with fallback
 try:
-    import sys
-    import os
-    # Add the parent directory to sys.path to import enhanced_header_detector
-    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    from enhanced_header_detector import EnhancedHeaderDetector
+    from .enhanced_header_detector import EnhancedHeaderDetector
     ENHANCED_HEADERS_AVAILABLE = True
 except ImportError:
     print("⚠️ Enhanced header detector not available - falling back to basic headers")

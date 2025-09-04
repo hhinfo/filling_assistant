@@ -3,10 +3,9 @@ from typing import Dict, List, Any, Optional, Tuple
 import json, re, os, sys
 from .schema import normalize
 
-# Add parent directory to path to import enhanced header detector
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Import enhanced header detector with fallback
 try:
-    from enhanced_header_detector import EnhancedHeaderDetector
+    from .enhanced_header_detector import EnhancedHeaderDetector
     ENHANCED_DETECTION_AVAILABLE = True
 except ImportError:
     ENHANCED_DETECTION_AVAILABLE = False

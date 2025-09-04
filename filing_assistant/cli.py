@@ -3,6 +3,11 @@ import json, typer, os
 from rich import print, box
 from rich.table import Table
 from rich.panel import Panel
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 from .store import load_store, save_store
 from .trainer import pair_training_files
 from .enhanced_trainer import enhanced_learn_from_pair, enhanced_merge_patterns
